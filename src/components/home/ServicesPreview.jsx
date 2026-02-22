@@ -98,30 +98,27 @@ const ServicesPreview = () => {
                 <Link to="/services" className="block h-full">
                   {/* Image Header */}
                   {service.image && (
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative h-64 overflow-hidden">
                       <img 
                         src={service.image} 
                         alt={service.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-800/50 to-transparent"></div>
                       
                       {/* Icon Badge on Image */}
                       <div className="absolute top-4 left-4 bg-white p-3 rounded-full shadow-lg">
                         <IconComponent className="text-2xl text-primary-600" />
-                      </div>
-                      
-                      {/* Title on Image */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <h3 className="text-xl font-bold text-white">
-                          {service.title}
-                        </h3>
                       </div>
                     </div>
                   )}
 
                   {/* Content */}
                   <div className="p-6">
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-gray-800 mb-3">
+                      {service.title}
+                    </h3>
+                    
                     {/* Short Description */}
                     <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3">
                       {service.shortDescription}

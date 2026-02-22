@@ -55,19 +55,10 @@ const Services = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-lg text-blue-200 mb-8"
+              className="text-lg text-blue-200"
             >
               From tax planning to audit services, we provide expert guidance across all aspects of financial management
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-            >
-              <Button variant="secondary" icon={FaPhone} to="/contact">
-                Schedule a Consultation
-              </Button>
-            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -108,34 +99,6 @@ const Services = () => {
 
       {/* FAQ Section */}
       <ServicesFAQ />
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-primary-900 to-primary-700 text-white">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Need Expert Financial Guidance?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Our team of experienced Chartered Accountants is ready to help you navigate complex financial challenges
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="secondary" to="/contact">
-                Get in Touch
-              </Button>
-              <Button variant="outline" to="/about">
-                Learn About Our Team
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };

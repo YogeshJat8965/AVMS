@@ -13,11 +13,8 @@ import {
   FaChartLine,
   FaChevronDown,
   FaChevronUp,
-  FaCheckCircle,
-  FaEnvelope
+  FaCheckCircle
 } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import Button from '../common/Button';
 
 const ServiceCard = ({ service, index }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -51,7 +48,7 @@ const ServiceCard = ({ service, index }) => {
     >
       {/* Service Image Header */}
       {service.image && (
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-64 overflow-hidden">
           <img 
             src={service.image} 
             alt={service.title}
@@ -169,29 +166,6 @@ const ServiceCard = ({ service, index }) => {
                   </div>
                 </div>
               )}
-
-              {/* CTA Button */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link to="/contact" className="flex-1">
-                  <Button 
-                    variant="primary" 
-                    size="md"
-                    icon={<FaEnvelope />}
-                    fullWidth
-                  >
-                    Get Started
-                  </Button>
-                </Link>
-                <Link to="/contact" className="flex-1">
-                  <Button 
-                    variant="outline" 
-                    size="md"
-                    fullWidth
-                  >
-                    Ask a Question
-                  </Button>
-                </Link>
-              </div>
             </div>
           </motion.div>
         )}

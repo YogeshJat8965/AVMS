@@ -1,5 +1,12 @@
 // Team and firm data - exact content from PDF
 
+// Import team images
+import anupImage from '../images/about us images/CA ANUP SHRIVASTAVA.jpeg';
+import vinayImage from '../images/about us images/CA VINARMA SHRIVASTAVA.jpeg';
+import architImage from '../images/about us images/CA ARCHIT SAXENA.jpeg';
+import anujImage from '../images/about us images/CA ANUJ JAIN.jpeg';
+import sakshiImage from '../images/about us images/CA SAKSHI AGRAWAL.jpeg';
+
 export const firmInfo = {
   name: "AVMS & Associates",
   type: "Chartered Accountants",
@@ -11,38 +18,68 @@ export const firmInfo = {
   specialization: "We are not a generalist practice trying to do everything. We have depth in specific areas — statutory audit for scheduled commercial banks, government and public sector audit, forensic investigations, GST compliance and litigation, income tax advisory, and corporate compliance under the Companies Act, 2013."
 };
 
-export const leadPartner = {
-  name: "CA Anup Shrivastava",
-  designation: "Lead Partner",
-  certifications: ["CISA", "FAFD"],
-  certificationsFull: [
-    {
-      abbr: "CISA",
-      full: "Certified Information Systems Auditor",
-      description: "Global certification for IT audit and cybersecurity professionals"
-    },
-    {
-      abbr: "FAFD",
-      full: "Fellow in Anti-Fraud and Forensics from ICAI",
-      description: "Advanced certification in forensic accounting and fraud detection"
-    }
-  ],
-  specializations: [
-    "Information Systems Audit",
-    "Forensic Audit",
-    "Banking Audit"
-  ],
-  experience: "Leading statutory bank audits, concurrent audits, IS audits for RBI-empaneled assignments",
-  expertise: [
-    "Fraud detection and investigation",
-    "Fund diversion investigations",
-    "Forensic accounting for banking clients",
-    "Forensic accounting for corporate clients",
-    "Information systems audit for banks",
-    "Statutory branch audit for scheduled commercial banks"
-  ],
-  image: "/images/team/ca-anup-shrivastava.jpg"
-};
+// Team Members
+export const teamMembers = [
+  {
+    id: 1,
+    name: "CA Anup Shrivastava",
+    designation: "Lead Partner",
+    certifications: ["CISA", "FAFD"],
+    certificationsFull: [
+      {
+        abbr: "CISA",
+        full: "Certified Information Systems Auditor",
+        description: "Global certification for IT audit and cybersecurity professionals"
+      },
+      {
+        abbr: "FAFD",
+        full: "Fellow in Anti-Fraud and Forensics from ICAI",
+        description: "Advanced certification in forensic accounting and fraud detection"
+      }
+    ],
+    specializations: [
+      "Information Systems Audit",
+      "Forensic Audit",
+      "Banking Audit"
+    ],
+    experience: "Leading statutory bank audits, concurrent audits, IS audits for RBI-empaneled assignments",
+    expertise: [
+      "Fraud detection and investigation",
+      "Fund diversion investigations",
+      "Forensic accounting for banking clients",
+      "Forensic accounting for corporate clients",
+      "Information systems audit for banks",
+      "Statutory branch audit for scheduled commercial banks"
+    ],
+    image: anupImage
+  },
+  {
+    id: 2,
+    name: "CA Vinayma Shrivastava",
+    designation: "Partner",
+    image: vinayImage
+  },
+  {
+    id: 3,
+    name: "CA Archit Saxena",
+    designation: "Partner",
+    image: architImage
+  },
+  {
+    id: 4,
+    name: "CA Anuj Jain",
+    designation: "Partner",
+    image: anujImage
+  },
+  {
+    id: 5,
+    name: "CA Sakshi Agrawal",
+    designation: "Partner",
+    image: sakshiImage
+  }
+];
+
+export const leadPartner = teamMembers[0];
 
 export const empanelments = [
   {

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaPhone, FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import logo from '../../images/logo.png';
 
 const Footer = () => {
   const containerVariants = {
@@ -50,12 +51,19 @@ const Footer = () => {
         >
           {/* Company Info */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl font-bold mb-4 text-white">AVMS & Associates</h3>
-            <p className="text-blue-100 text-sm leading-relaxed">
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src={logo} 
+                alt="AVMS Logo" 
+                className="h-12 w-12 object-contain"
+              />
+              <h3 className="text-4xl font-bold text-white leading-[3rem]" style={{ fontFamily: '"Playfair Display", serif', letterSpacing: '0.05em' }}>AVMS</h3>
+            </div>
+            <p className="text-white text-sm leading-relaxed">
               Chartered Accountants<br />
               Bhopal, Madhya Pradesh, India
             </p>
-            <div className="mt-4 flex items-start text-blue-200 text-sm">
+            <div className="mt-4 flex items-start text-white text-sm">
               <FaMapMarkerAlt className="mr-2 mt-1 flex-shrink-0 text-secondary-400" />
               <span>Serving clients across India with 30+ years of excellence</span>
             </div>
@@ -66,37 +74,37 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-blue-100 hover:text-secondary-400 transition-colors duration-300 flex items-center group">
+                <Link to="/" className="text-white hover:text-secondary-400 transition-colors duration-300 flex items-center group">
                   <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-blue-100 hover:text-secondary-400 transition-colors duration-300 flex items-center group">
+                <Link to="/about" className="text-white hover:text-secondary-400 transition-colors duration-300 flex items-center group">
                   <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-blue-100 hover:text-secondary-400 transition-colors duration-300 flex items-center group">
+                <Link to="/services" className="text-white hover:text-secondary-400 transition-colors duration-300 flex items-center group">
                   <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/industries" className="text-blue-100 hover:text-secondary-400 transition-colors duration-300 flex items-center group">
+                <Link to="/industries" className="text-white hover:text-secondary-400 transition-colors duration-300 flex items-center group">
                   <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
                   Industries
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="text-blue-100 hover:text-secondary-400 transition-colors duration-300 flex items-center group">
+                <Link to="/careers" className="text-white hover:text-secondary-400 transition-colors duration-300 flex items-center group">
                   <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
                   Careers
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-blue-100 hover:text-secondary-400 transition-colors duration-300 flex items-center group">
+                <Link to="/contact" className="text-white hover:text-secondary-400 transition-colors duration-300 flex items-center group">
                   <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
                   Contact
                 </Link>
@@ -107,7 +115,7 @@ const Footer = () => {
           {/* Services */}
           <motion.div variants={itemVariants}>
             <h4 className="text-lg font-semibold mb-4 text-white">Our Services</h4>
-            <ul className="space-y-2 text-blue-100 text-sm">
+            <ul className="space-y-2 text-white text-sm">
               <li className="flex items-start">
                 <span className="mr-2 text-secondary-400">•</span>
                 Income Tax Services
@@ -138,18 +146,18 @@ const Footer = () => {
           {/* Contact Info */}
           <motion.div variants={itemVariants}>
             <h4 className="text-lg font-semibold mb-4 text-white">Contact Us</h4>
-            <ul className="space-y-3 text-blue-100 text-sm">
+            <ul className="space-y-3 text-sm">
               <li className="flex items-center hover:text-secondary-400 transition-colors duration-300">
                 <FaPhone className="mr-3 flex-shrink-0 text-secondary-400" />
-                <a href="tel:07552555642">0755-2555642</a>
+                <a href="tel:07552555642" className="text-white">0755-2555642</a>
               </li>
               <li className="flex items-center hover:text-secondary-400 transition-colors duration-300">
                 <FaPhone className="mr-3 flex-shrink-0 text-secondary-400" />
-                <a href="tel:+917222909440">+91-7222909440</a>
+                <a href="tel:+917222909440" className="text-white">+91-7222909440</a>
               </li>
               <li className="flex items-center hover:text-secondary-400 transition-colors duration-300">
                 <FaEnvelope className="mr-3 flex-shrink-0 text-secondary-400" />
-                <a href="mailto:ca.avms@gmail.com">
+                <a href="mailto:ca.avms@gmail.com" className="text-white">
                   ca.avms@gmail.com
                 </a>
               </li>
@@ -159,6 +167,7 @@ const Footer = () => {
                   href="https://linkedin.com/company/a-v-m-s-associates" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  className="text-white"
                 >
                   Connect on LinkedIn
                 </a>

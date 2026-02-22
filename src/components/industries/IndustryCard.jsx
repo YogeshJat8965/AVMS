@@ -62,23 +62,14 @@ const IndustryCard = ({ industry }) => {
       transition={{ duration: 0.3 }}
       className="bg-white rounded-xl border-2 border-blue-100 overflow-hidden h-full flex flex-col group hover:border-primary-300"
     >
-      {/* Image Header */}
+      {/* Image */}
       {industry.image && (
-        <div className="relative h-40 overflow-hidden">
+        <div className="relative h-64 overflow-hidden">
           <img 
             src={industry.image} 
             alt={industry.title}
             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 to-transparent"></div>
-          <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
-            <div className="bg-white p-2.5 rounded-lg shadow-lg">
-              <IconComponent className="text-2xl text-primary-600" />
-            </div>
-            <h3 className="text-lg font-bold text-white flex-1">
-              {industry.title}
-            </h3>
-          </div>
         </div>
       )}
 
@@ -98,34 +89,20 @@ const IndustryCard = ({ industry }) => {
 
       {/* Content */}
       <div className="p-6 flex-1 flex flex-col">
-        <p className="text-gray-700 leading-relaxed mb-4 flex-1">
+        {/* Title with Icon */}
+        <div className="flex items-center gap-3 mb-4">
+          <div className="bg-primary-100 p-2.5 rounded-lg flex-shrink-0">
+            <IconComponent className="text-2xl text-primary-600" />
+          </div>
+          <h3 className="text-xl font-bold text-gray-900 flex-1">
+            {industry.title}
+          </h3>
+        </div>
+
+        {/* Description */}
+        <p className="text-gray-700 leading-relaxed">
           {industry.description}
         </p>
-
-        {/* Highlights */}
-        {industry.highlights && industry.highlights.length > 0 && (
-          <div className="mt-4 pt-4 border-t border-gray-100">
-            <h4 className="text-sm font-semibold text-gray-900 mb-3 flex items-center gap-2">
-              <span className="w-1 h-4 bg-secondary-500 rounded"></span>
-              Key Highlights
-            </h4>
-            <ul className="space-y-2">
-              {industry.highlights.map((highlight, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-sm text-gray-600 flex items-start gap-2"
-                >
-                  <span className="text-secondary-500 mt-1 flex-shrink-0">•</span>
-                  <span>{highlight}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
     </motion.div>
   );

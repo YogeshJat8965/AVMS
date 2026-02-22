@@ -45,7 +45,7 @@ export const industries = [
       "FCRA compliance",
       "Educational trust audits"
     ],
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80&fit=crop"
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&q=80&fit=crop"
   },
   {
     id: 4,
@@ -150,7 +150,7 @@ export const industries = [
       "Rate notification compliance",
       "Textile-specific GST issues"
     ],
-    image: "https://images.unsplash.com/photo-1558769132-cb1aea8c763d?w=600&q=80&fit=crop"
+    image: "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&q=80&fit=crop"
   },
   {
     id: 11,

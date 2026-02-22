@@ -9,7 +9,6 @@ import {
   FaChevronUp,
   FaCheckCircle
 } from 'react-icons/fa';
-import Button from '../common/Button';
 
 // Icon mapping for job types
 const iconMap = {
@@ -112,13 +111,6 @@ const JobCard = ({ job }) => {
             </AnimatePresence>
           </div>
         )}
-
-        {/* Apply Button */}
-        <div className="mt-6 pt-4 border-t border-gray-100">
-          <Button variant="primary" to="/contact" className="w-full sm:w-auto">
-            Apply for This Position
-          </Button>
-        </div>
       </div>
     </motion.div>
   );

@@ -1,6 +1,14 @@
 // All services data - exact content from PDF
 // 10 service categories for AVMS & Associates
 
+// Import service images
+import incomeTaxImg from '../images/Our Services images/income_tax.png';
+import advisoryImg from '../images/Our Services images/advisory.png';
+import corporateImg from '../images/Our Services images/corporate.png';
+import accountingImg from '../images/Our Services images/accounting.png';
+import auditServicesImg from '../images/Our Services images/audit_services.png';
+import forensicAuditImg from '../images/Our Services images/forensic_audit.png';
+
 export const services = [
   {
     id: 1,
@@ -21,7 +29,7 @@ export const services = [
       "Advance tax and self-assessment tax calculation",
       "Penalty and prosecution defense under Sections 270A and 276C"
     ],
-    image: "https://images.unsplash.com/photo-1554224311-beee0c9338ff?w=800&q=80&fit=crop",
+    image: incomeTaxImg,
     category: "Tax"
   },
   {
@@ -43,7 +51,7 @@ export const services = [
       "GST litigation — representation before Joint Commissioner, Commissioner (Appeals), GST Appellate Tribunal",
       "Industry-specific GST rate classification guidance (particularly for food processing, textiles, real estate, construction)"
     ],
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80&fit=crop",
+    image: advisoryImg,
     category: "Tax"
   },
   {
@@ -64,7 +72,7 @@ export const services = [
       "Related party transaction compliance under Section 188",
       "Charge registration (Section 77) for loan agreements and security creation"
     ],
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80&fit=crop",
+    image: corporateImg,
     category: "Corporate"
   },
   {
@@ -85,7 +93,7 @@ export const services = [
       "Financial statement preparation for bank loan applications (CMA data format)",
       "Accounting guidance for newly established businesses"
     ],
-    image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80&fit=crop",
+    image: accountingImg,
     category: "Accounting"
   },
   {
@@ -141,7 +149,7 @@ export const services = [
         deliverable: "IS Audit Report to bank management and RBI"
       }
     ],
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&fit=crop",
+    image: auditServicesImg,
     category: "Audit"
   },
   {
@@ -162,7 +170,7 @@ export const services = [
       "Corporate fraud investigation for shareholders, boards, or regulators",
       "Reporting to police, regulators, or courts as required"
     ],
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80&fit=crop",
+    image: forensicAuditImg,
     category: "Audit"
   },
   {

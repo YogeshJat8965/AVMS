@@ -135,20 +135,20 @@ const Hero = () => {
 
             {/* Quick Contact Info */}
             <motion.div 
-              className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center text-blue-100"
+              className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center"
               variants={itemVariants}
             >
               <a 
                 href="tel:07552555642" 
-                className="flex items-center gap-2 hover:text-secondary-400 transition-colors duration-300"
+                className="flex items-center gap-2 text-white hover:text-secondary-400 transition-colors duration-300"
               >
                 <FaPhone />
                 <span>0755-2555642</span>
               </a>
-              <span className="hidden sm:inline">|</span>
+              <span className="hidden sm:inline text-white">|</span>
               <a 
                 href="mailto:ca.avms@gmail.com" 
-                className="flex items-center gap-2 hover:text-secondary-400 transition-colors duration-300"
+                className="flex items-center gap-2 text-white hover:text-secondary-400 transition-colors duration-300"
               >
                 <FaEnvelope />
                 <span>ca.avms@gmail.com</span>
