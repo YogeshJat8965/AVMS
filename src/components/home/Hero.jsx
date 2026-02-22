@@ -56,7 +56,7 @@ const Hero = () => {
       </div>
 
       <div className="container-custom relative z-10 w-full">
-        <div className="py-20 lg:py-32">
+        <div className="py-12 md:py-20 lg:py-32">
           <motion.div
             className="max-w-4xl mx-auto text-center"
             variants={containerVariants}
