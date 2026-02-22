@@ -74,7 +74,7 @@ const ServiceCard = ({ service, index }) => {
           <div className="flex items-start gap-4 mb-4">
             {/* Icon */}
             <div className="flex-shrink-0">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center shadow-md">
+              <div className="w-16 h-16 bg-gradient-to-br from-accent-600 to-accent-700 rounded-lg flex items-center justify-center shadow-md">
                 <IconComponent className="text-3xl text-white" />
               </div>
             </div>

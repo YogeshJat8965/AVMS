@@ -4,16 +4,26 @@
 export const aboutFAQs = [
   {
     id: 1,
-    question: "What makes AVMS & Associates different from other CA firms in Bhopal?",
-    answer: "Three things — depth of experience in banking and government audit (RBI empaneled, C&AG registered), a technically qualified team led by CA Anup Shrivastava (CISA, FAFD), and a track record across 22+ industries over 30 years. We handle complex, regulated assignments that require both technical rigor and regulatory familiarity."
+    question: "When was AVMS & Associates established?",
+    answer: "AVMS & Associates was established in 1993 in Bhopal, Madhya Pradesh. The firm has been in continuous practice for over 30 years."
   },
   {
     id: 2,
+    question: "Is AVMS & Associates registered with the ICAI?",
+    answer: "Yes. All partners of the firm are members of the Institute of Chartered Accountants of India (ICAI) — India's statutory body for the accountancy profession, established under the Chartered Accountants Act, 1949."
+  },
+  {
+    id: 3,
+    question: "What makes AVMS & Associates different from other CA firms in Bhopal?",
+    answer: "AVMS & Associates combines three credentials that are rare even among established firms: RBI Category-I empanelment for bank audits, C&AG registration for government audits, and CISA-qualified partners for IT system audits. The firm has been in practice since 1993 and has served 22+ industries across Central India."
+  },
+  {
+    id: 4,
     question: "Is AVMS & Associates empaneled with the Reserve Bank of India?",
     answer: "Yes. The firm holds RBI Category-I empanelment, qualifying it to conduct statutory branch audits, concurrent audits, revenue audits, and IS audits for scheduled commercial banks across India."
   },
   {
-    id: 3,
+    id: 5,
     question: "Does AVMS & Associates handle government audit assignments?",
     answer: "Yes. The firm is registered with the Comptroller and Auditor General of India (C&AG) and conducts audit assignments for central and state government departments, PSUs, autonomous bodies, and grant-funded projects under GFR 2017 and CAG audit standards."
   }

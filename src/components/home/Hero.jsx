@@ -37,7 +37,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 text-white overflow-hidden min-h-screen flex items-center">
+    <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 text-white overflow-hidden min-h-[calc(100vh-5rem)] md:min-h-screen flex items-center">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 

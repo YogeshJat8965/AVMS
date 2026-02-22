@@ -72,14 +72,14 @@ const CredentialsCards = () => {
               <motion.div
                 key={credential.id}
                 variants={cardVariants}
-                whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(37, 99, 235, 0.2)' }}
-                className="bg-gradient-to-br from-white to-blue-50 rounded-xl p-8 shadow-lg border-2 border-blue-100 hover:border-primary-300 transition-all duration-300"
+                whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(34, 197, 94, 0.2)' }}
+                className="bg-gradient-to-br from-white to-accent-50 rounded-xl p-8 shadow-lg border-2 border-accent-100 hover:border-accent-300 transition-all duration-300"
               >
                 <div className="flex flex-col items-center text-center">
                   {/* Icon */}
                   {IconComponent && (
                     <div className="mb-4">
-                      <div className="w-20 h-20 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center shadow-lg">
+                      <div className="w-20 h-20 bg-gradient-to-br from-accent-600 to-accent-700 rounded-full flex items-center justify-center shadow-lg">
                         <IconComponent className="text-4xl text-white" />
                       </div>
                     </div>

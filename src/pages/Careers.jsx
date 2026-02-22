@@ -95,11 +95,11 @@ const Careers = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-lg border border-gray-200 hover:shadow-lg hover:border-primary-300 transition-all duration-300"
+                  className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-lg border border-gray-200 hover:shadow-lg hover:border-accent-300 transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary-100 p-3 rounded-lg flex-shrink-0">
-                      <IconComponent className="text-2xl text-primary-700" />
+                    <div className="bg-accent-100 p-3 rounded-lg flex-shrink-0">
+                      <IconComponent className="text-2xl text-accent-700" />
                     </div>
                     <p className="text-gray-700 leading-relaxed flex-1">
                       {item.quality}

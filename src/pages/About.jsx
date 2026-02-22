@@ -1,8 +1,9 @@
 import React from 'react';
 import Introduction from '../components/about/Introduction';
 import StatsSection from '../components/about/StatsSection';
-import TeamSection from '../components/about/TeamSection';
+import FirmHistory from '../components/about/FirmHistory';
 import Empanelments from '../components/about/Empanelments';
+import OurValues from '../components/about/OurValues';
 import ProfessionalApproach from '../components/about/ProfessionalApproach';
 import AboutFAQ from '../components/about/AboutFAQ';
 
@@ -15,11 +16,14 @@ const About = () => {
       {/* Stats Section */}
       <StatsSection />
 
-      {/* Team Section */}
-      <TeamSection />
+      {/* Firm History & Journey */}
+      <FirmHistory />
 
       {/* Empanelments Section */}
       <Empanelments />
+
+      {/* Our Values */}
+      <OurValues />
 
       {/* Professional Approach Section */}
       <ProfessionalApproach />

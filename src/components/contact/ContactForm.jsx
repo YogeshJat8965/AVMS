@@ -72,11 +72,10 @@ const ContactForm = () => {
     setSubmitStatus(null);
 
     try {
-      // EmailJS configuration
-      // Replace these with your actual EmailJS credentials
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      // EmailJS configuration from environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_tjhgc7r';
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_39xyhpc';
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'CM_nb8U7I8dEOty2d';
 
       const templateParams = {
         from_name: formData.name,
@@ -84,14 +83,11 @@ const ContactForm = () => {
         from_phone: formData.phone,
         subject: formData.subject || 'No Subject',
         message: formData.message,
-        to_email: 'ca.avms@gmail.com'
+        to_email: 'yogeshjat8965@gmail.com'
       };
 
-      // Uncomment when EmailJS is configured
-      // await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      
-      // Simulated success for now
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Send email via EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
       setSubmitStatus('success');
       setFormData({
@@ -244,12 +240,12 @@ const ContactForm = () => {
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-lg"
+            className="flex items-center gap-3 p-4 bg-accent-50 border border-accent-200 rounded-lg"
           >
-            <FaCheckCircle className="text-green-600 text-xl flex-shrink-0" />
+            <FaCheckCircle className="text-accent-600 text-xl flex-shrink-0" />
             <div>
-              <p className="font-semibold text-green-800">Message Sent Successfully!</p>
-              <p className="text-sm text-green-700">We'll get back to you within one business day.</p>
+              <p className="font-semibold text-accent-800">Message Sent Successfully!</p>
+              <p className="text-sm text-accent-700">We'll get back to you within one business day.</p>
             </div>
           </motion.div>
         )}

@@ -61,9 +61,9 @@ const AboutPreview = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-primary-100 hover:border-primary-300 group"
+                  className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-accent-100 hover:border-accent-300 group"
                 >
-                  <div className="bg-gradient-to-br from-primary-500 to-primary-600 text-white p-3 rounded-lg group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div className="bg-gradient-to-br from-accent-500 to-accent-600 text-white p-3 rounded-lg group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <highlight.icon className="text-xl" />
                   </div>
                   <span className="text-gray-800 font-medium">{highlight.text}</span>
@@ -139,7 +139,7 @@ const AboutPreview = () => {
               whileInView={{ opacity: 1, scale: 1, rotate: 3 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-              className="absolute -bottom-2 -right-2 md:-bottom-6 md:-right-6 bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 text-white px-4 py-3 md:px-8 md:py-5 rounded-xl md:rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 border-2 md:border-4 border-white"
+              className="absolute -bottom-2 -right-2 md:-bottom-6 md:-right-6 bg-gradient-to-br from-accent-500 via-accent-600 to-accent-700 text-white px-4 py-3 md:px-8 md:py-5 rounded-xl md:rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 border-2 md:border-4 border-white"
             >
               <div className="text-center">
                 <div className="font-black text-2xl md:text-4xl mb-1 drop-shadow-lg">RBI</div>

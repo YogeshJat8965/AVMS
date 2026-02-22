@@ -58,9 +58,9 @@ const IndustryCard = ({ industry }) => {
 
   return (
     <motion.div
-      whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(37, 99, 235, 0.25)" }}
+      whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(34, 197, 94, 0.25)" }}
       transition={{ duration: 0.3 }}
-      className="bg-white rounded-xl border-2 border-blue-100 overflow-hidden h-full flex flex-col group hover:border-primary-300"
+      className="bg-white rounded-xl border-2 border-accent-100 overflow-hidden h-full flex flex-col group hover:border-accent-300"
     >
       {/* Image */}
       {industry.image && (
@@ -75,7 +75,7 @@ const IndustryCard = ({ industry }) => {
 
       {/* Fallback Icon Header if no image */}
       {!industry.image && (
-        <div className="bg-gradient-to-br from-primary-700 to-primary-600 p-6 text-white">
+        <div className="bg-gradient-to-br from-accent-700 to-accent-600 p-6 text-white">
           <div className="flex items-center gap-4">
             <div className="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
               <IconComponent className="text-3xl" />
@@ -91,8 +91,8 @@ const IndustryCard = ({ industry }) => {
       <div className="p-6 flex-1 flex flex-col">
         {/* Title with Icon */}
         <div className="flex items-center gap-3 mb-4">
-          <div className="bg-primary-100 p-2.5 rounded-lg flex-shrink-0">
-            <IconComponent className="text-2xl text-primary-600" />
+          <div className="bg-accent-100 p-2.5 rounded-lg flex-shrink-0">
+            <IconComponent className="text-2xl text-accent-600" />
           </div>
           <h3 className="text-xl font-bold text-gray-900 flex-1">
             {industry.title}

@@ -9,6 +9,7 @@ import ScrollToTop from './components/common/ScrollToTop';
 // Pages
 import Home from './pages/Home';
 import About from './pages/About';
+import Team from './pages/Team';
 import Services from './pages/Services';
 import Industries from './pages/Industries';
 import Careers from './pages/Careers';
@@ -24,6 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/team" element={<Team />} />
             <Route path="/services" element={<Services />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/careers" element={<Careers />} />
