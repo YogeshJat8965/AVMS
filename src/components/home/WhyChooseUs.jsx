@@ -35,6 +35,16 @@ const WhyChooseUs = () => {
 
   return (
     <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 opacity-20">
+        <img 
+          src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=1920&q=80&fit=crop" 
+          alt="Professional Business Background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/90 to-white/90"></div>
+      </div>
+      
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -82,19 +92,19 @@ const WhyChooseUs = () => {
                   scale: 1.03,
                   boxShadow: '0 20px 40px rgba(0, 0, 0, 0.12)'
                 }}
-                className="bg-white rounded-xl p-8 shadow-lg border-2 border-blue-100 hover:border-primary-300 transition-all duration-300"
+                className="bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-blue-100 hover:border-primary-300 transition-all duration-300 group"
               >
                 <div className="flex items-start gap-6">
                   {/* Icon */}
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center shadow-md">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="text-3xl text-white" />
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-3">
                       {reason.title}
                     </h3>
                     <p className="text-gray-700 leading-relaxed">

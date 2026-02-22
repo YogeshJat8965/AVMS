@@ -73,19 +73,36 @@ const AboutPreview = () => {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl p-8 shadow-2xl">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  Our Professional Approach
-                </h3>
-                <p className="text-blue-100 leading-relaxed italic">
-                  "{firmInfo.approach}"
-                </p>
+            {/* Professional Image */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+              <img 
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&fit=crop" 
+                alt="Professional Chartered Accountant Office" 
+                className="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-800/50 to-transparent"></div>
+              
+              {/* Text Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    Our Professional Approach
+                  </h3>
+                  <p className="text-blue-100 leading-relaxed italic">
+                    "{firmInfo.approach}"
+                  </p>
+                </div>
               </div>
-
-              {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary-500 rounded-full opacity-20 blur-2xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary-400 rounded-full opacity-20 blur-2xl"></div>
+            </div>
+            
+            {/* Stats Badges */}
+            <div className="absolute -top-4 -left-4 bg-gradient-to-br from-secondary-500 to-secondary-600 text-white px-6 py-4 rounded-xl shadow-xl transform -rotate-3">
+              <div className="font-bold text-2xl">30+</div>
+              <div className="text-sm">Years</div>
+            </div>
+            <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-primary-600 to-primary-700 text-white px-6 py-4 rounded-xl shadow-xl transform rotate-3">
+              <div className="font-bold text-2xl">RBI</div>
+              <div className="text-sm">Empaneled</div>
             </div>
           </motion.div>
         </div>
