@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import JobCard from '../components/careers/JobCard';
 import Button from '../components/common/Button';
+import BackgroundPattern from '../components/common/BackgroundPattern';
 import {
   FaBook,
   FaLightbulb,
@@ -28,8 +29,9 @@ const Careers = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white py-16 lg:py-24">
-        <div className="container-custom">
+      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white py-16 lg:py-24 overflow-hidden">
+        <BackgroundPattern variant="grid" />
+        <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -65,8 +67,9 @@ const Careers = () => {
       </section>
 
       {/* What We Look For Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container-custom">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50 relative">
+        <BackgroundPattern variant="dots" />
+        <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +77,7 @@ const Careers = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-4">
               {whatWeLookFor.heading}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -110,7 +113,7 @@ const Careers = () => {
       </section>
 
       {/* Current Opportunities Section */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -119,7 +122,7 @@ const Careers = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-4">
               Current Opportunities
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -136,8 +139,9 @@ const Careers = () => {
       </section>
 
       {/* How to Apply Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container-custom">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50 relative">
+        <BackgroundPattern variant="accounting" />
+        <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -145,8 +149,8 @@ const Careers = () => {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
-            <div className="bg-gradient-to-br from-primary-50 to-blue-50 p-8 md:p-12 rounded-2xl border border-primary-100">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+            <div className="bg-gradient-to-br from-primary-50 to-blue-50 p-8 md:p-12 rounded-2xl border-2 border-primary-100">
+              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-6 text-center">
                 {howToApply.heading}
               </h2>
               

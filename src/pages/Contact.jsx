@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import ContactForm from '../components/contact/ContactForm';
 import ContactInfo from '../components/contact/ContactInfo';
 import ContactFAQ from '../components/contact/ContactFAQ';
+import BackgroundPattern from '../components/common/BackgroundPattern';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { contactIntro } from '../data/contactData';
 
@@ -10,8 +11,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white py-16 lg:py-24">
-        <div className="container-custom">
+      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white py-16 lg:py-24 overflow-hidden">
+        <BackgroundPattern variant="diagonal" />
+        <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,8 +41,9 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Info Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container-custom">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50 relative">
+        <BackgroundPattern variant="dots" />
+        <div className="container-custom relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Left Side - Contact Form */}
             <div>
@@ -65,7 +68,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-4">
               Our Location
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
