@@ -76,7 +76,7 @@ const StatsSection = () => {
               >
                 <div className="flex flex-col items-center text-center">
                   {/* Icon */}
-                  <IconComponent className="text-4xl md:text-5xl text-secondary-400 mb-4" />
+                  <IconComponent className="text-4xl md:text-5xl text-accent-400 mb-4" />
                   
                   {/* Number */}
                   <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">

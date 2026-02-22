@@ -71,7 +71,7 @@ const Empanelments = () => {
               >
                 {/* Icon */}
                 <div className="flex justify-center mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary-600 to-primary-800 rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-20 h-20 bg-gradient-to-br from-accent-600 to-accent-800 rounded-full flex items-center justify-center shadow-lg">
                     <IconComponent className="text-4xl text-white" />
                   </div>
                 </div>
@@ -99,7 +99,7 @@ const Empanelments = () => {
                   <ul className="space-y-2">
                     {empanelment.scope.slice(0, 4).map((item, index) => (
                       <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
-                        <FaCheckCircle className="text-primary-600 flex-shrink-0 mt-0.5 text-xs" />
+                        <FaCheckCircle className="text-accent-600 flex-shrink-0 mt-0.5 text-xs" />
                         <span>{item}</span>
                       </li>
                     ))}

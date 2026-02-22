@@ -59,7 +59,7 @@ const CTASection = () => {
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
             >
               <div className="flex flex-col items-center text-center">
-                <FaPhone className="text-4xl mb-3 text-secondary-400 group-hover:scale-110 transition-transform duration-300" />
+                <FaPhone className="text-4xl mb-3 text-accent-400 group-hover:scale-110 transition-transform duration-300" />
                 <p className="text-sm text-blue-200 mb-1">Call Us</p>
                 <p className="font-semibold text-lg">{contactData.phone}</p>
               </div>
@@ -71,7 +71,7 @@ const CTASection = () => {
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
             >
               <div className="flex flex-col items-center text-center">
-                <FaEnvelope className="text-4xl mb-3 text-secondary-400 group-hover:scale-110 transition-transform duration-300" />
+                <FaEnvelope className="text-4xl mb-3 text-accent-400 group-hover:scale-110 transition-transform duration-300" />
                 <p className="text-sm text-blue-200 mb-1">Email Us</p>
                 <p className="font-semibold text-lg break-all">{contactData.email}</p>
               </div>
@@ -85,7 +85,7 @@ const CTASection = () => {
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
             >
               <div className="flex flex-col items-center text-center">
-                <FaLinkedin className="text-4xl mb-3 text-secondary-400 group-hover:scale-110 transition-transform duration-300" />
+                <FaLinkedin className="text-4xl mb-3 text-accent-400 group-hover:scale-110 transition-transform duration-300" />
                 <p className="text-sm text-blue-200 mb-1">Connect on</p>
                 <p className="font-semibold text-lg">LinkedIn</p>
               </div>

@@ -51,7 +51,7 @@ const FirmHistory = () => {
             className="text-center mb-12"
           >
             <div className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-md mb-6">
-              <FaHistory className="text-2xl text-primary-600" />
+              <FaHistory className="text-2xl text-accent-600" />
               <span className="text-primary-700 font-semibold">Since 1993</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -117,7 +117,7 @@ const FirmHistory = () => {
                     whileHover={{ y: -8 }}
                     className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-100 hover:border-primary-300 transition-all duration-300"
                   >
-                    <div className="bg-gradient-to-br from-primary-500 to-primary-600 text-white w-14 h-14 rounded-lg flex items-center justify-center mb-4 shadow-lg">
+                    <div className="bg-gradient-to-br from-accent-500 to-accent-600 text-white w-14 h-14 rounded-lg flex items-center justify-center mb-4 shadow-lg">
                       <Icon className="text-2xl" />
                     </div>
                     
@@ -128,7 +128,7 @@ const FirmHistory = () => {
                     <ul className="space-y-2">
                       {area.services.map((service, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-gray-700">
-                          <span className="text-primary-600 mt-1">•</span>
+                          <span className="text-accent-600 mt-1">•</span>
                           <span className="text-sm">{service}</span>
                         </li>
                       ))}

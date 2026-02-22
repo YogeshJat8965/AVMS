@@ -44,7 +44,7 @@ const ServiceCard = ({ service, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="bg-white rounded-xl shadow-lg border-2 border-blue-100 overflow-hidden hover:shadow-2xl hover:border-primary-300 transition-all duration-300"
+      className="bg-white rounded-xl shadow-lg border-2 border-accent-100 overflow-hidden hover:shadow-2xl hover:border-accent-300 transition-all duration-300"
     >
       {/* Service Image Header */}
       {service.image && (
@@ -58,7 +58,7 @@ const ServiceCard = ({ service, index }) => {
           <div className="absolute bottom-4 left-4 right-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg">
-                <IconComponent className="text-2xl text-primary-600" />
+                <IconComponent className="text-2xl text-accent-600" />
               </div>
               <h3 className="text-xl font-bold text-white">
                 {service.title}
@@ -85,7 +85,7 @@ const ServiceCard = ({ service, index }) => {
                 {service.title}
               </h3>
               {service.category && (
-                <span className="inline-block bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-xs font-semibold">
+                <span className="inline-block bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-xs font-semibold">
                   {service.category}
                 </span>
               )}
@@ -95,7 +95,7 @@ const ServiceCard = ({ service, index }) => {
 
         {service.image && service.category && (
           <div className="mb-4">
-            <span className="inline-block bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-xs font-semibold">
+            <span className="inline-block bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-xs font-semibold">
               {service.category}
             </span>
           </div>
@@ -109,7 +109,7 @@ const ServiceCard = ({ service, index }) => {
         {/* Expand Button */}
         <button
           onClick={toggleExpand}
-          className="flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors duration-300"
+          className="flex items-center gap-2 text-accent-600 hover:text-accent-700 font-semibold transition-colors duration-300"
         >
           <span>{isExpanded ? 'Show Less' : 'Learn More'}</span>
           {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
@@ -159,7 +159,7 @@ const ServiceCard = ({ service, index }) => {
                   <div className="grid grid-cols-1 gap-3">
                     {service.servicesInclude.map((item, idx) => (
                       <div key={idx} className="flex items-start gap-3">
-                        <FaCheckCircle className="text-primary-600 flex-shrink-0 mt-1" />
+                        <FaCheckCircle className="text-accent-600 flex-shrink-0 mt-1" />
                         <span className="text-gray-700">{item}</span>
                       </div>
                     ))}

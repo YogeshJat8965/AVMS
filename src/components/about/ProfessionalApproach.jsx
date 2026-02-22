@@ -63,12 +63,12 @@ const ProfessionalApproach = () => {
             </div>
 
             <div className="relative z-10">
-              <FaQuoteLeft className="text-5xl text-secondary-400 mb-6" />
+              <FaQuoteLeft className="text-5xl text-accent-400 mb-6" />
               <blockquote className="text-xl md:text-2xl font-medium leading-relaxed italic mb-6">
                 {firmInfo.approach}
               </blockquote>
               <div className="flex items-center gap-2">
-                <FaHandshake className="text-3xl text-secondary-400" />
+                <FaHandshake className="text-3xl text-accent-400" />
                 <p className="text-blue-200 font-semibold">
                   AVMS & Associates - Professional Commitment
                 </p>
@@ -98,8 +98,8 @@ const ProfessionalApproach = () => {
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                        <Icon className="text-2xl text-primary-600" />
+                      <div className="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center">
+                        <Icon className="text-2xl text-accent-600" />
                       </div>
                     </div>
                     <div>

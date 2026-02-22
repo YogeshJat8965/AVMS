@@ -57,12 +57,12 @@ const ContactInfo = () => {
                 transition={{ delay: index * 0.1, duration: 0.4 }}
                 className={`flex items-start gap-4 p-4 rounded-lg border border-gray-200 ${
                   isClickable 
-                    ? 'hover:bg-primary-50 hover:border-primary-300 cursor-pointer transition-all' 
+                    ? 'hover:bg-accent-50 hover:border-accent-300 cursor-pointer transition-all' 
                     : 'bg-gray-50'
                 }`}
               >
-                <div className="bg-primary-100 p-3 rounded-lg flex-shrink-0">
-                  <IconComponent className="text-xl text-primary-700" />
+                <div className="bg-accent-100 p-3 rounded-lg flex-shrink-0">
+                  <IconComponent className="text-xl text-accent-700" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <h4 className="font-semibold text-gray-900 mb-1">{method.type}</h4>

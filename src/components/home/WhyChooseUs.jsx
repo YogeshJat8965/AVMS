@@ -92,19 +92,19 @@ const WhyChooseUs = () => {
                   scale: 1.03,
                   boxShadow: '0 20px 40px rgba(0, 0, 0, 0.12)'
                 }}
-                className="bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-blue-100 hover:border-primary-300 transition-all duration-300 group"
+                className="bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-accent-100 hover:border-accent-300 transition-all duration-300 group"
               >
                 <div className="flex items-start gap-6">
                   {/* Icon */}
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-16 h-16 bg-gradient-to-br from-accent-600 to-accent-700 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="text-3xl text-white" />
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-3">
+                    <h3 className="text-xl font-bold bg-gradient-to-r from-accent-700 to-accent-900 bg-clip-text text-transparent mb-3">
                       {reason.title}
                     </h3>
                     <p className="text-gray-700 leading-relaxed">

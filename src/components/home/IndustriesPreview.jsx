@@ -111,17 +111,17 @@ const IndustriesPreview = () => {
                   boxShadow: '0 20px 40px rgba(0, 0, 0, 0.15)',
                   scale: 1.02
                 }}
-                className="bg-gradient-to-br from-primary-50 to-white rounded-xl p-6 shadow-md border border-primary-100 hover:border-primary-300 transition-all duration-300 cursor-pointer group"
+                className="bg-gradient-to-br from-accent-50 to-white rounded-xl p-6 shadow-md border border-accent-100 hover:border-accent-300 transition-all duration-300 cursor-pointer group"
               >
                 <Link to="/industries" className="block h-full">
                   <div className="flex flex-col items-center text-center h-full">
                     {/* Icon */}
-                    <div className="text-5xl text-primary-600 mb-4 group-hover:text-primary-700 group-hover:scale-110 transition-all duration-300">
+                    <div className="text-5xl text-accent-600 mb-4 group-hover:text-accent-700 group-hover:scale-110 transition-all duration-300">
                       <IconComponent />
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-accent-600 transition-colors duration-300">
                       {industry.title}
                     </h3>
 
