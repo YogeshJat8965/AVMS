@@ -58,21 +58,43 @@ const IndustryCard = ({ industry }) => {
 
   return (
     <motion.div
-      whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
+      whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(37, 99, 235, 0.25)" }}
       transition={{ duration: 0.3 }}
-      className="bg-white rounded-lg border border-gray-200 overflow-hidden h-full flex flex-col group"
+      className="bg-white rounded-xl border-2 border-blue-100 overflow-hidden h-full flex flex-col group hover:border-primary-300"
     >
-      {/* Icon Header */}
-      <div className="bg-gradient-to-br from-primary-800 to-primary-600 p-6 text-white">
-        <div className="flex items-center gap-4">
-          <div className="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
-            <IconComponent className="text-3xl" />
+      {/* Image Header */}
+      {industry.image && (
+        <div className="relative h-40 overflow-hidden">
+          <img 
+            src={industry.image} 
+            alt={industry.title}
+            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 to-transparent"></div>
+          <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
+            <div className="bg-white p-2.5 rounded-lg shadow-lg">
+              <IconComponent className="text-2xl text-primary-600" />
+            </div>
+            <h3 className="text-lg font-bold text-white flex-1">
+              {industry.title}
+            </h3>
           </div>
-          <h3 className="text-xl font-bold flex-1 group-hover:scale-105 transition-transform duration-300">
-            {industry.title}
-          </h3>
         </div>
-      </div>
+      )}
+
+      {/* Fallback Icon Header if no image */}
+      {!industry.image && (
+        <div className="bg-gradient-to-br from-primary-700 to-primary-600 p-6 text-white">
+          <div className="flex items-center gap-4">
+            <div className="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
+              <IconComponent className="text-3xl" />
+            </div>
+            <h3 className="text-xl font-bold flex-1 group-hover:scale-105 transition-transform duration-300">
+              {industry.title}
+            </h3>
+          </div>
+        </div>
+      )}
 
       {/* Content */}
       <div className="p-6 flex-1 flex flex-col">

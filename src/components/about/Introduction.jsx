@@ -14,8 +14,16 @@ const Introduction = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="container-custom">
+    <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle, rgba(59, 130, 246, 0.2) 1px, transparent 1px)`,
+          backgroundSize: '30px 30px'
+        }}></div>
+      </div>
+      
+      <div className="container-custom relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Page Header */}
           <motion.div
@@ -24,11 +32,11 @@ const Introduction = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-6">
               About AVMS & Associates
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-secondary-500 mx-auto mb-6"></div>
-            <p className="text-xl md:text-2xl text-gray-600">
+            <p className="text-xl md:text-2xl text-gray-700">
               {firmInfo.type} | {firmInfo.location}
             </p>
           </motion.div>
@@ -66,8 +74,8 @@ const Introduction = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <div className="bg-gradient-to-br from-white to-blue-50 rounded-xl shadow-xl p-8 border-2 border-blue-100">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-6 flex items-center gap-2">
                   <span className="text-primary-600">✓</span>
                   Key Highlights
                 </h3>

@@ -15,7 +15,7 @@ export const industries = [
       "IS audits",
       "Stock audits"
     ],
-    image: "/images/industries/banking.jpg"
+    image: "https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=600&q=80&fit=crop"
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ export const industries = [
       "Autonomous body audits",
       "GFR 2017 compliance"
     ],
-    image: "/images/industries/government.jpg"
+    image: "https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?w=600&q=80&fit=crop"
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ export const industries = [
       "FCRA compliance",
       "Educational trust audits"
     ],
-    image: "/images/industries/education.jpg"
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80&fit=crop"
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ export const industries = [
       "RERA compliance",
       "Infrastructure project advisory"
     ],
-    image: "/images/industries/construction.jpg"
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80&fit=crop"
   },
   {
     id: 5,
@@ -75,7 +75,7 @@ export const industries = [
       "DGFT advisory",
       "Income tax planning"
     ],
-    image: "/images/industries/manufacturing.jpg"
+    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80&fit=crop"
   },
   {
     id: 6,
@@ -90,7 +90,7 @@ export const industries = [
       "RERA compliance",
       "Developer and buyer advisory"
     ],
-    image: "/images/industries/real-estate.jpg"
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&fit=crop"
   },
   {
     id: 7,
@@ -105,7 +105,7 @@ export const industries = [
       "Processing level classification",
       "Packaging-based rate determination"
     ],
-    image: "/images/industries/food-processing.jpg"
+    image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80&fit=crop"
   },
   {
     id: 8,
@@ -120,7 +120,7 @@ export const industries = [
       "GST on agri inputs/outputs",
       "Working capital compliance"
     ],
-    image: "/images/industries/agribusiness.jpg"
+    image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&q=80&fit=crop"
   },
   {
     id: 9,
@@ -135,7 +135,7 @@ export const industries = [
       "Section 8 company audits",
       "Society and trust audits"
     ],
-    image: "/images/industries/ngo.jpg"
+    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80&fit=crop"
   },
   {
     id: 10,
@@ -150,7 +150,7 @@ export const industries = [
       "Rate notification compliance",
       "Textile-specific GST issues"
     ],
-    image: "/images/industries/textile.jpg"
+    image: "https://images.unsplash.com/photo-1558769132-cb1aea8c763d?w=600&q=80&fit=crop"
   },
   {
     id: 11,
@@ -165,7 +165,7 @@ export const industries = [
       "GST on software/SaaS",
       "Place of supply for exports"
     ],
-    image: "/images/industries/it-software.jpg"
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80&fit=crop"
   },
   {
     id: 12,
@@ -180,7 +180,7 @@ export const industries = [
       "Mining lease advisory",
       "Madhya Pradesh operations"
     ],
-    image: "/images/industries/metals-mining.jpg"
+    image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80&fit=crop"
   },
   {
     id: 13,
@@ -195,7 +195,7 @@ export const industries = [
       "Micro-enterprise advisory",
       "Affordable pricing"
     ],
-    image: "/images/industries/small-business.jpg"
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80&fit=crop"
   },
   {
     id: 14,
@@ -210,7 +210,7 @@ export const industries = [
       "Project-specific audits",
       "Central scheme compliance"
     ],
-    image: "/images/industries/urban-development.jpg"
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&q=80&fit=crop"
   },
   {
     id: 15,
@@ -225,7 +225,7 @@ export const industries = [
       "Inventory management",
       "Retail operations support"
     ],
-    image: "/images/industries/fmcg.jpg"
+    image: "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600&q=80&fit=crop"
   },
   {
     id: 16,
@@ -240,7 +240,7 @@ export const industries = [
       "Inventory valuation",
       "Retail tax planning"
     ],
-    image: "/images/industries/retail.jpg"
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80&fit=crop"
   },
   {
     id: 17,
@@ -255,7 +255,7 @@ export const industries = [
       "Industry-specific taxation",
       "Working capital management"
     ],
-    image: "/images/industries/automotive.jpg"
+    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=80&fit=crop"
   },
   {
     id: 18,
@@ -270,7 +270,7 @@ export const industries = [
       "GST on marketing services",
       "Agency relationship advisory"
     ],
-    image: "/images/industries/marketing.jpg"
+    image: "https://images.unsplash.com/photo-1557838923-2985c318be48?w=600&q=80&fit=crop"
   },
   {
     id: 19,
@@ -285,7 +285,7 @@ export const industries = [
       "Manufacturing compliance",
       "Trading operations support"
     ],
-    image: "/images/industries/metal-trading.jpg"
+    image: "https://images.unsplash.com/photo-1533310266094-8898a03807dd?w=600&q=80&fit=crop"
   },
   {
     id: 20,
@@ -300,7 +300,7 @@ export const industries = [
       "Content creator advisory",
       "Digital media taxation"
     ],
-    image: "/images/industries/publishing.jpg"
+    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80&fit=crop"
   },
   {
     id: 21,
@@ -315,7 +315,7 @@ export const industries = [
       "Public fund accounting",
       "Departmental audit requirements"
     ],
-    image: "/images/industries/govt-publishing.jpg"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&fit=crop"
   },
   {
     id: 22,
@@ -330,7 +330,7 @@ export const industries = [
       "Plantation taxation",
       "Sector-specific GST"
     ],
-    image: "/images/industries/plantation.jpg"
+    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=600&q=80&fit=crop"
   },
   {
     id: 23,
@@ -345,7 +345,7 @@ export const industries = [
       "Manufacturing GST",
       "Working capital advisory"
     ],
-    image: "/images/industries/industrial.jpg"
+    image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&q=80&fit=crop"
   }
 ];
 
