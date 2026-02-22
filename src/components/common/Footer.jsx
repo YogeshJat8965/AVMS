@@ -26,8 +26,21 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container-custom py-12">
+    <footer className="bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 39px,
+            rgba(255, 255, 255, 0.1) 39px,
+            rgba(255, 255, 255, 0.1) 40px
+          )`
+        }}></div>
+      </div>
+
+      <div className="container-custom py-12 relative z-10">
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           initial="hidden"
@@ -38,12 +51,12 @@ const Footer = () => {
           {/* Company Info */}
           <motion.div variants={itemVariants}>
             <h3 className="text-xl font-bold mb-4 text-white">AVMS & Associates</h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-blue-100 text-sm leading-relaxed">
               Chartered Accountants<br />
               Bhopal, Madhya Pradesh, India
             </p>
-            <div className="mt-4 flex items-start text-gray-300 text-sm">
-              <FaMapMarkerAlt className="mr-2 mt-1 flex-shrink-0 text-secondary-500" />
+            <div className="mt-4 flex items-start text-blue-200 text-sm">
+              <FaMapMarkerAlt className="mr-2 mt-1 flex-shrink-0 text-secondary-400" />
               <span>Serving clients across India with 30+ years of excellence</span>
             </div>
           </motion.div>
@@ -53,37 +66,37 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-secondary-500 transition-colors duration-300 flex items-center group">
+                <Link to="/" className="text-blue-100 hover:text-secondary-400 transition-colors duration-300 flex items-center group">
                   <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-secondary-500 transition-colors duration-300 flex items-center group">
+                <Link to="/about" className="text-blue-100 hover:text-secondary-400 transition-colors duration-300 flex items-center group">
                   <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-secondary-500 transition-colors duration-300 flex items-center group">
+                <Link to="/services" className="text-blue-100 hover:text-secondary-400 transition-colors duration-300 flex items-center group">
                   <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/industries" className="text-gray-300 hover:text-secondary-500 transition-colors duration-300 flex items-center group">
+                <Link to="/industries" className="text-blue-100 hover:text-secondary-400 transition-colors duration-300 flex items-center group">
                   <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
                   Industries
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="text-gray-300 hover:text-secondary-500 transition-colors duration-300 flex items-center group">
+                <Link to="/careers" className="text-blue-100 hover:text-secondary-400 transition-colors duration-300 flex items-center group">
                   <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
                   Careers
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-secondary-500 transition-colors duration-300 flex items-center group">
+                <Link to="/contact" className="text-blue-100 hover:text-secondary-400 transition-colors duration-300 flex items-center group">
                   <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
                   Contact
                 </Link>
@@ -94,29 +107,29 @@ const Footer = () => {
           {/* Services */}
           <motion.div variants={itemVariants}>
             <h4 className="text-lg font-semibold mb-4 text-white">Our Services</h4>
-            <ul className="space-y-2 text-gray-300 text-sm">
+            <ul className="space-y-2 text-blue-100 text-sm">
               <li className="flex items-start">
-                <span className="mr-2 text-secondary-500">•</span>
+                <span className="mr-2 text-secondary-400">•</span>
                 Income Tax Services
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-secondary-500">•</span>
+                <span className="mr-2 text-secondary-400">•</span>
                 GST Compliance
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-secondary-500">•</span>
+                <span className="mr-2 text-secondary-400">•</span>
                 Statutory & Internal Audit
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-secondary-500">•</span>
+                <span className="mr-2 text-secondary-400">•</span>
                 Corporate Compliance
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-secondary-500">•</span>
+                <span className="mr-2 text-secondary-400">•</span>
                 Accounting & Bookkeeping
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-secondary-500">•</span>
+                <span className="mr-2 text-secondary-400">•</span>
                 Management Consultancy
               </li>
             </ul>
@@ -125,23 +138,23 @@ const Footer = () => {
           {/* Contact Info */}
           <motion.div variants={itemVariants}>
             <h4 className="text-lg font-semibold mb-4 text-white">Contact Us</h4>
-            <ul className="space-y-3 text-gray-300 text-sm">
-              <li className="flex items-center hover:text-secondary-500 transition-colors duration-300">
-                <FaPhone className="mr-3 flex-shrink-0 text-secondary-500" />
+            <ul className="space-y-3 text-blue-100 text-sm">
+              <li className="flex items-center hover:text-secondary-400 transition-colors duration-300">
+                <FaPhone className="mr-3 flex-shrink-0 text-secondary-400" />
                 <a href="tel:07552555642">0755-2555642</a>
               </li>
-              <li className="flex items-center hover:text-secondary-500 transition-colors duration-300">
-                <FaPhone className="mr-3 flex-shrink-0 text-secondary-500" />
+              <li className="flex items-center hover:text-secondary-400 transition-colors duration-300">
+                <FaPhone className="mr-3 flex-shrink-0 text-secondary-400" />
                 <a href="tel:+917222909440">+91-7222909440</a>
               </li>
-              <li className="flex items-center hover:text-secondary-500 transition-colors duration-300">
-                <FaEnvelope className="mr-3 flex-shrink-0 text-secondary-500" />
+              <li className="flex items-center hover:text-secondary-400 transition-colors duration-300">
+                <FaEnvelope className="mr-3 flex-shrink-0 text-secondary-400" />
                 <a href="mailto:ca.avms@gmail.com">
                   ca.avms@gmail.com
                 </a>
               </li>
-              <li className="flex items-center hover:text-secondary-500 transition-colors duration-300">
-                <FaLinkedin className="mr-3 flex-shrink-0 text-secondary-500" />
+              <li className="flex items-center hover:text-secondary-400 transition-colors duration-300">
+                <FaLinkedin className="mr-3 flex-shrink-0 text-secondary-400" />
                 <a 
                   href="https://linkedin.com/company/a-v-m-s-associates" 
                   target="_blank" 

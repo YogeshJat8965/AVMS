@@ -37,7 +37,17 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 text-white overflow-hidden">
+    <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 text-white overflow-hidden min-h-screen flex items-center">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1554224311-beee0c9338ff?w=1920&q=80&fit=crop" 
+          alt="Professional Office" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 via-primary-800/90 to-blue-900/95"></div>
+      </div>
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -45,7 +55,7 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-10 w-full">
         <div className="py-20 lg:py-32">
           <motion.div
             className="max-w-4xl mx-auto text-center"

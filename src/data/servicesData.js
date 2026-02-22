@@ -21,7 +21,7 @@ export const services = [
       "Advance tax and self-assessment tax calculation",
       "Penalty and prosecution defense under Sections 270A and 276C"
     ],
-    image: "/images/services/income-tax.jpg",
+    image: "https://images.unsplash.com/photo-1554224311-beee0c9338ff?w=800&q=80&fit=crop",
     category: "Tax"
   },
   {
@@ -43,7 +43,7 @@ export const services = [
       "GST litigation — representation before Joint Commissioner, Commissioner (Appeals), GST Appellate Tribunal",
       "Industry-specific GST rate classification guidance (particularly for food processing, textiles, real estate, construction)"
     ],
-    image: "/images/services/gst-compliance.jpg",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80&fit=crop",
     category: "Tax"
   },
   {
@@ -64,7 +64,7 @@ export const services = [
       "Related party transaction compliance under Section 188",
       "Charge registration (Section 77) for loan agreements and security creation"
     ],
-    image: "/images/services/corporate-compliance.jpg",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80&fit=crop",
     category: "Corporate"
   },
   {
@@ -85,7 +85,7 @@ export const services = [
       "Financial statement preparation for bank loan applications (CMA data format)",
       "Accounting guidance for newly established businesses"
     ],
-    image: "/images/services/accounting.jpg",
+    image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80&fit=crop",
     category: "Accounting"
   },
   {
@@ -141,7 +141,7 @@ export const services = [
         deliverable: "IS Audit Report to bank management and RBI"
       }
     ],
-    image: "/images/services/audit.jpg",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&fit=crop",
     category: "Audit"
   },
   {
@@ -162,7 +162,7 @@ export const services = [
       "Corporate fraud investigation for shareholders, boards, or regulators",
       "Reporting to police, regulators, or courts as required"
     ],
-    image: "/images/services/forensic-audit.jpg",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80&fit=crop",
     category: "Audit"
   },
   {
@@ -182,7 +182,7 @@ export const services = [
       "Performance audit and value-for-money audit where applicable",
       "Reporting in the format required by the specific government programme or the C&AG"
     ],
-    image: "/images/services/government-audit.jpg",
+    image: "https://images.unsplash.com/photo-1555421689-d68471e189f2?w=800&q=80&fit=crop",
     category: "Audit"
   },
   {
@@ -201,7 +201,7 @@ export const services = [
       "Donor-specific audit formats (UN agencies, bilateral donors, private foundations)",
       "Annual return filing for trusts and societies under applicable state acts"
     ],
-    image: "/images/services/ngo-audit.jpg",
+    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80&fit=crop",
     category: "Audit"
   },
   {
@@ -219,7 +219,7 @@ export const services = [
       "Review of insurance coverage on hypothecated stocks",
       "Reporting in the format required by the specific lending institution, aligned with RBI guidelines on stock audit reporting"
     ],
-    image: "/images/services/stock-audit.jpg",
+    image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80&fit=crop",
     category: "Audit"
   },
   {
@@ -238,7 +238,7 @@ export const services = [
       "Cost audit and cost reduction advisory — for manufacturing businesses; identifying where costs can be reduced without compromising quality or compliance",
       "Succession planning — for family businesses; advising on the legal, tax, and governance aspects of ownership transition"
     ],
-    image: "/images/services/consultancy.jpg",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&fit=crop",
     category: "Advisory"
   }
 ];

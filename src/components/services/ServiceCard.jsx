@@ -47,30 +47,62 @@ const ServiceCard = ({ service, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300"
+      className="bg-white rounded-xl shadow-lg border-2 border-blue-100 overflow-hidden hover:shadow-2xl hover:border-primary-300 transition-all duration-300"
     >
-      {/* Card Header - Always Visible */}
-      <div className="p-6">
-        <div className="flex items-start gap-4 mb-4">
-          {/* Icon */}
-          <div className="flex-shrink-0">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center shadow-md">
-              <IconComponent className="text-3xl text-white" />
+      {/* Service Image Header */}
+      {service.image && (
+        <div className="relative h-48 overflow-hidden">
+          <img 
+            src={service.image} 
+            alt={service.title}
+            className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent"></div>
+          <div className="absolute bottom-4 left-4 right-4">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg">
+                <IconComponent className="text-2xl text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold text-white">
+                {service.title}
+              </h3>
             </div>
           </div>
-
-          {/* Title and Category */}
-          <div className="flex-1">
-            <h3 className="text-xl font-bold text-gray-900 mb-1">
-              {service.title}
-            </h3>
-            {service.category && (
-              <span className="inline-block bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-xs font-semibold">
-                {service.category}
-              </span>
-            )}
-          </div>
         </div>
+      )}
+
+      {/* Card Header - Always Visible */}
+      <div className="p-6">
+        {!service.image && (
+          <div className="flex items-start gap-4 mb-4">
+            {/* Icon */}
+            <div className="flex-shrink-0">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center shadow-md">
+                <IconComponent className="text-3xl text-white" />
+              </div>
+            </div>
+
+            {/* Title and Category */}
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-gray-900 mb-1">
+                {service.title}
+              </h3>
+              {service.category && (
+                <span className="inline-block bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-xs font-semibold">
+                  {service.category}
+                </span>
+              )}
+            </div>
+          </div>
+        )}
+
+        {service.image && service.category && (
+          <div className="mb-4">
+            <span className="inline-block bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-xs font-semibold">
+              {service.category}
+            </span>
+          </div>
+        )}
 
         {/* Short Description */}
         <p className="text-gray-700 leading-relaxed mb-4">

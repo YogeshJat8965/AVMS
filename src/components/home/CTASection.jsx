@@ -7,7 +7,17 @@ import { contactData } from '../../data/contactData';
 
 const CTASection = () => {
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 text-white relative overflow-hidden">
+    <section className="relative py-16 lg:py-24 bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 text-white overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1920&q=80&fit=crop" 
+          alt="Team Collaboration" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 via-primary-800/90 to-blue-900/95"></div>
+      </div>
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{

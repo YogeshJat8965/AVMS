@@ -34,20 +34,32 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
-      <div className="container-custom">
+    <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 30px,
+            rgba(59, 130, 246, 0.1) 30px,
+            rgba(59, 130, 246, 0.1) 60px
+          )`
+        }}></div>
+      </div>
+
+      <div className="container-custom relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-4">
             Why Choose AVMS & Associates?
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Professional expertise backed by credentials, experience, and integrity
           </p>
         </motion.div>
@@ -70,13 +82,13 @@ const WhyChooseUs = () => {
                   scale: 1.03,
                   boxShadow: '0 20px 40px rgba(0, 0, 0, 0.12)'
                 }}
-                className="bg-white rounded-xl p-8 shadow-md border border-gray-200 transition-all duration-300"
+                className="bg-white rounded-xl p-8 shadow-lg border-2 border-blue-100 hover:border-primary-300 transition-all duration-300"
               >
                 <div className="flex items-start gap-6">
                   {/* Icon */}
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center">
-                      <IconComponent className="text-3xl text-primary-600" />
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center shadow-md">
+                      <IconComponent className="text-3xl text-white" />
                     </div>
                   </div>
 
@@ -103,9 +115,9 @@ const WhyChooseUs = () => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="mt-12 text-center"
         >
-          <div className="inline-block bg-gradient-to-r from-primary-600 to-primary-800 text-white rounded-full px-8 py-4 shadow-lg">
+          <div className="inline-block bg-gradient-to-r from-primary-700 via-primary-600 to-blue-700 text-white rounded-full px-8 py-4 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
             <p className="text-lg font-semibold">
-              30+ Years of Professional Excellence | RBI & C&AG Empaneled | 22+ Industries Served
+              30+ Years of Professional Excellence | RBI & C&AG Empaneled | 23+ Industries Served
             </p>
           </div>
         </motion.div>

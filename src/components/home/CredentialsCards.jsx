@@ -34,8 +34,16 @@ const CredentialsCards = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
-      <div className="container-custom">
+    <section className="relative py-16 lg:py-24 bg-white overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle, rgba(59, 130, 246, 0.2) 1px, transparent 1px)`,
+          backgroundSize: '30px 30px'
+        }}></div>
+      </div>
+
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,10 +51,10 @@ const CredentialsCards = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-4">
             Our Credentials
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Trusted by businesses and institutions across India
           </p>
         </motion.div>
@@ -64,14 +72,16 @@ const CredentialsCards = () => {
               <motion.div
                 key={credential.id}
                 variants={cardVariants}
-                whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0, 0, 0, 0.15)' }}
-                className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 transition-all duration-300"
+                whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(37, 99, 235, 0.2)' }}
+                className="bg-gradient-to-br from-white to-blue-50 rounded-xl p-8 shadow-lg border-2 border-blue-100 hover:border-primary-300 transition-all duration-300"
               >
                 <div className="flex flex-col items-center text-center">
                   {/* Icon */}
                   {IconComponent && (
-                    <div className={`text-5xl mb-4 ${credential.iconColor}`}>
-                      <IconComponent />
+                    <div className="mb-4">
+                      <div className="w-20 h-20 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center shadow-lg">
+                        <IconComponent className="text-4xl text-white" />
+                      </div>
                     </div>
                   )}
 
