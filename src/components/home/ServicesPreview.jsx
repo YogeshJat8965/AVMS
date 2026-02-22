@@ -93,28 +93,45 @@ const ServicesPreview = () => {
                 key={service.id}
                 variants={cardVariants}
                 whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0, 0, 0, 0.12)' }}
-                className="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:border-primary-300 transition-all duration-300 cursor-pointer group"
+                className="bg-white rounded-xl overflow-hidden shadow-md border-2 border-gray-100 hover:border-primary-300 transition-all duration-300 cursor-pointer group"
               >
                 <Link to="/services" className="block h-full">
-                  {/* Icon */}
-                  <div className="text-4xl text-primary-600 mb-4 group-hover:text-primary-700 transition-colors duration-300">
-                    <IconComponent />
-                  </div>
+                  {/* Image Header */}
+                  {service.image && (
+                    <div className="relative h-48 overflow-hidden">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-800/50 to-transparent"></div>
+                      
+                      {/* Icon Badge on Image */}
+                      <div className="absolute top-4 left-4 bg-white p-3 rounded-full shadow-lg">
+                        <IconComponent className="text-2xl text-primary-600" />
+                      </div>
+                      
+                      {/* Title on Image */}
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 className="text-xl font-bold text-white">
+                          {service.title}
+                        </h3>
+                      </div>
+                    </div>
+                  )}
 
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">
-                    {service.title}
-                  </h3>
+                  {/* Content */}
+                  <div className="p-6">
+                    {/* Short Description */}
+                    <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3">
+                      {service.shortDescription}
+                    </p>
 
-                  {/* Short Description */}
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {service.shortDescription}
-                  </p>
-
-                  {/* Learn More Link */}
-                  <div className="flex items-center text-primary-600 font-semibold group-hover:text-primary-700">
-                    <span className="mr-2">Learn More</span>
-                    <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
+                    {/* Learn More Link */}
+                    <div className="flex items-center text-primary-600 font-semibold group-hover:text-primary-700">
+                      <span className="mr-2">Learn More</span>
+                      <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
+                    </div>
                   </div>
                 </Link>
               </motion.div>
