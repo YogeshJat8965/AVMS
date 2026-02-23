@@ -10,7 +10,7 @@ export const aboutFAQs = [
   {
     id: 2,
     question: "Is AVMS & Associates registered with the ICAI?",
-    answer: "Yes. All partners of the firm are members of the Institute of Chartered Accountants of India (ICAI) — India's statutory body for the accountancy profession, established under the Chartered Accountants Act, 1949."
+    answer: "Yes. All partners of the firm are members of the Institute of Chartered Accountants of India (ICAI) - India's statutory body for the accountancy profession, established under the Chartered Accountants Act, 1949."
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ export const servicesFAQs = [
   {
     id: 1,
     question: "Does AVMS & Associates handle GST return filing?",
-    answer: "Yes. The firm handles complete GST compliance — registration, monthly GSTR-1 and GSTR-3B filing, annual GSTR-9 and GSTR-9C, ITC reconciliation, e-invoicing, GST notices, and appeals under the Central Goods and Services Tax Act, 2017."
+    answer: "Yes. The firm handles complete GST compliance - registration, monthly GSTR-1 and GSTR-3B filing, annual GSTR-9 and GSTR-9C, ITC reconciliation, e-invoicing, GST notices, and appeals under the Central Goods and Services Tax Act, 2017."
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ export const servicesFAQs = [
   {
     id: 3,
     question: "What is the difference between a statutory audit and an internal audit?",
-    answer: "A statutory audit is required by law (Companies Act, 2013 or Banking Regulation Act, 1949) and is conducted for external stakeholders — shareholders, lenders, regulators. An internal audit is a management tool that examines internal processes and controls; it may be mandatory under Section 138 of the Companies Act for certain companies, or voluntary for others."
+    answer: "A statutory audit is required by law (Companies Act, 2013 or Banking Regulation Act, 1949) and is conducted for external stakeholders - shareholders, lenders, regulators. An internal audit is a management tool that examines internal processes and controls; it may be mandatory under Section 138 of the Companies Act for certain companies, or voluntary for others."
   },
   {
     id: 4,
@@ -56,7 +56,7 @@ export const industriesFAQs = [
   {
     id: 1,
     question: "Does AVMS & Associates work with NGOs and charitable trusts?",
-    answer: "Yes. The firm handles audit and compliance for registered societies, trusts, and Section 8 companies — including 12AB registration for income tax exemption, 80G registration for donors, FCRA compliance, and annual statutory filing."
+    answer: "Yes. The firm handles audit and compliance for registered societies, trusts, and Section 8 companies - including 12AB registration for income tax exemption, 80G registration for donors, FCRA compliance, and annual statutory filing."
   },
   {
     id: 2,
@@ -74,7 +74,7 @@ export const contactFAQs = [
   {
     id: 2,
     question: "Does AVMS & Associates serve clients outside Bhopal?",
-    answer: "Yes. While the firm is headquartered in Bhopal, Madhya Pradesh, it serves clients across Central India and undertakes specialized assignments — including bank audits, forensic investigations, and government audit assignments — across multiple states."
+    answer: "Yes. While the firm is headquartered in Bhopal, Madhya Pradesh, it serves clients across Central India and undertakes specialized assignments - including bank audits, forensic investigations, and government audit assignments - across multiple states."
   }
 ];
 

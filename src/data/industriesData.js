@@ -52,7 +52,7 @@ export const industries = [
     title: "Construction and Infrastructure",
     slug: "construction",
     icon: "FaHardHat",
-    description: "Comprehensive tax and compliance services for construction companies and infrastructure project developers — including GST on works contracts (Section 2(119) of the CGST Act), percentage completion method accounting, TDS obligations under Section 194C of the Income Tax Act, and compliance with RERA (Real Estate Regulation and Development Act, 2016) for real estate developers.",
+    description: "Comprehensive tax and compliance services for construction companies and infrastructure project developers - including GST on works contracts (Section 2(119) of the CGST Act), percentage completion method accounting, TDS obligations under Section 194C of the Income Tax Act, and compliance with RERA (Real Estate Regulation and Development Act, 2016) for real estate developers.",
     highlights: [
       "GST on works contracts",
       "Percentage completion accounting",
@@ -82,7 +82,7 @@ export const industries = [
     title: "Real Estate and Housing",
     slug: "real-estate",
     icon: "FaHome",
-    description: "Income tax advisory for both developers and purchasers — including capital gains tax provisions under Sections 54 and 54F, GST applicability on under-construction properties, TDS under Section 194IA on property purchases, and RERA compliance guidance.",
+    description: "Income tax advisory for both developers and purchasers - including capital gains tax provisions under Sections 54 and 54F, GST applicability on under-construction properties, TDS under Section 194IA on property purchases, and RERA compliance guidance.",
     highlights: [
       "Capital gains tax (Sections 54, 54F)",
       "GST on under-construction properties",
@@ -97,7 +97,7 @@ export const industries = [
     title: "Food Processing",
     slug: "food-processing",
     icon: "FaAppleAlt",
-    description: "GST rate classification for food products is one of the most disputed areas in indirect tax — rates vary from nil to 5% to 12% to 18% depending on the product, its processing level, and its packaging. We advise food processing clients on rate classification, ITC eligibility, and compliance requirements specific to this sector.",
+    description: "GST rate classification for food products is one of the most disputed areas in indirect tax - rates vary from nil to 5% to 12% to 18% depending on the product, its processing level, and its packaging. We advise food processing clients on rate classification, ITC eligibility, and compliance requirements specific to this sector.",
     highlights: [
       "GST rate classification",
       "ITC eligibility guidance",
@@ -112,7 +112,7 @@ export const industries = [
     title: "Agribusiness and Horticulture",
     slug: "agribusiness",
     icon: "FaTractor",
-    description: "Agricultural income is exempt from income tax under Section 10(1) of the Income Tax Act, 1961 — but the rules around partial agricultural income, business income derived from agri operations, and clubbing provisions are nuanced. We advise agribusiness clients on these distinctions, along with GST on agricultural inputs and outputs and working capital compliance for farming enterprises.",
+    description: "Agricultural income is exempt from income tax under Section 10(1) of the Income Tax Act, 1961 - but the rules around partial agricultural income, business income derived from agri operations, and clubbing provisions are nuanced. We advise agribusiness clients on these distinctions, along with GST on agricultural inputs and outputs and working capital compliance for farming enterprises.",
     highlights: [
       "Section 10(1) exemption advisory",
       "Partial agricultural income",
@@ -142,7 +142,7 @@ export const industries = [
     title: "Textile Manufacturing",
     slug: "textile",
     icon: "FaTshirt",
-    description: "The textile sector in India has historically faced challenges with the inverted duty structure under GST — where input tax rates were higher than output rates, creating refund claims that the department often scrutinizes closely. We advise textile manufacturers on ITC eligibility, refund claims, and the compliance implications of the GST Council's rate notifications specific to textiles.",
+    description: "The textile sector in India has historically faced challenges with the inverted duty structure under GST - where input tax rates were higher than output rates, creating refund claims that the department often scrutinizes closely. We advise textile manufacturers on ITC eligibility, refund claims, and the compliance implications of the GST Council's rate notifications specific to textiles.",
     highlights: [
       "Inverted duty structure advisory",
       "ITC eligibility",
@@ -172,7 +172,7 @@ export const industries = [
     title: "Metals and Mining",
     slug: "metals-mining",
     icon: "FaGem",
-    description: "Audit and tax services for metal trading companies and guidance on royalty and mineral cess obligations applicable to mining leases under the Mines and Minerals (Development and Regulation) Act, 1957 — relevant for businesses operating in the mineral-rich regions of Madhya Pradesh.",
+    description: "Audit and tax services for metal trading companies and guidance on royalty and mineral cess obligations applicable to mining leases under the Mines and Minerals (Development and Regulation) Act, 1957 - relevant for businesses operating in the mineral-rich regions of Madhya Pradesh.",
     highlights: [
       "Royalty and mineral cess",
       "Mines and Minerals Act compliance",
@@ -187,7 +187,7 @@ export const industries = [
     title: "Individual and Small Businesses",
     slug: "small-business",
     icon: "FaStore",
-    description: "A small business owner or a self-employed professional deserves the same quality of accounting advice as a large corporation — they just need it explained differently and priced appropriately. We offer income tax filing, GST registration, and compliance support designed for individuals, professionals, micro-enterprises, and non-corporate sector businesses.",
+    description: "A small business owner or a self-employed professional deserves the same quality of accounting advice as a large corporation - they just need it explained differently and priced appropriately. We offer income tax filing, GST registration, and compliance support designed for individuals, professionals, micro-enterprises, and non-corporate sector businesses.",
     highlights: [
       "Individual income tax filing",
       "GST registration and compliance",
@@ -202,7 +202,7 @@ export const industries = [
     title: "Urban Development and Planning",
     slug: "urban-development",
     icon: "FaCity",
-    description: "Audit and advisory services for urban development authorities and local bodies involved in city planning and infrastructure development — including municipal fund accounting, project-specific audit requirements, and compliance with central scheme guidelines.",
+    description: "Audit and advisory services for urban development authorities and local bodies involved in city planning and infrastructure development - including municipal fund accounting, project-specific audit requirements, and compliance with central scheme guidelines.",
     highlights: [
       "Urban development authority audits",
       "Municipal fund accounting",

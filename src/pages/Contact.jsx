@@ -34,7 +34,7 @@ const Contact = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-xl text-blue-100 leading-relaxed"
             >
-              Whether you have questions about tax, GST, audit, or need business advisory — we're here to help
+              Whether you have questions about tax, GST, audit, or need business advisory - we're here to help
             </motion.p>
           </motion.div>
         </div>

@@ -2,7 +2,7 @@
 
 // Import team images
 import anupImage from '../images/about us images/CA ANUP SHRIVASTAVA.jpeg';
-import vinayImage from '../images/about us images/CA VINARMA SHRIVASTAVA.jpeg';
+import vinamraImage from '../images/about us images/CA VINARMA SHRIVASTAVA.jpeg';
 import architImage from '../images/about us images/CA ARCHIT SAXENA.jpeg';
 import anujImage from '../images/about us images/CA ANUJ JAIN.jpeg';
 import sakshiImage from '../images/about us images/CA SAKSHI AGRAWAL.jpeg';
@@ -23,7 +23,11 @@ export const teamMembers = [
   {
     id: 1,
     name: "CA Anup Shrivastava",
-    designation: "Lead Partner",
+    designation: "Founding Partner",
+    membershipNo: "075270",
+    qualifications: ["B.Sc.", "FCA", "DISA (ICA)", "CISA (USA)", "FAFD", "CCAB", "AICA Level-1", "Social Auditor"],
+    experienceYears: "30+",
+    contact: "+91-9827210226",
     certifications: ["CISA", "FAFD"],
     certificationsFull: [
       {
@@ -55,27 +59,122 @@ export const teamMembers = [
   },
   {
     id: 2,
-    name: "CA Vinayma Shrivastava",
-    designation: "Partner",
-    image: vinayImage
+    name: "CA Sudeep Moitra",
+    designation: "Senior Partner",
+    membershipNo: "400340",
+    qualifications: ["B.Com", "FCA", "DISA (ICA)", "CCAB"],
+    experienceYears: "21+",
+    contact: "+91-9827016895",
+    specializations: [
+      "Statutory Audit",
+      "System Audit",
+      "Bank Audit"
+    ],
+    experience: "Statutory audit, system audit, and bank audit assignments for public sector banks",
+    expertise: [
+      "Primary domain in banking with statutory and concurrent audit assignments",
+      "Expert in examining lending decisions, KYC compliance, bank-wide MIS systems",
+      "Deep understanding of RBI's Master Directions on Statutory Central Auditors",
+      "Specialized in Long-Form Audit Report (LFAR) for credit, investment, treasury operations",
+      "Focus on internal controls to prevent errors, fraud, and regulatory lapses"
+    ],
+    image: null
   },
   {
     id: 3,
-    name: "CA Archit Saxena",
-    designation: "Partner",
-    image: architImage
+    name: "CA Sakshi Agrawal",
+    designation: "Partner, Corporate Law, GST & Assurance",
+    membershipNo: "427741",
+    qualifications: ["B.Com", "FCA", "CCAB"],
+    experienceYears: "11+",
+    contact: "+91-8770044885",
+    specializations: [
+      "Corporate Law",
+      "GST Advisory",
+      "Audit Assurance"
+    ],
+    experience: "Corporate law, GST advisory, audit assurance, and financial reporting",
+    expertise: [
+      "Complete lifecycle of company compliance: incorporation, MCA21 filings, board documentation",
+      "Expert in Companies Act, 2013 compliance including Form AOC-4 and Form MGT-7",
+      "Full GST compliance cycle under CGST Act, 2017: registration, monthly returns (GSTR-1, GSTR-3B)",
+      "Handles GSTR-9, GSTR-9C reconciliation, ITC reconciliation against GSTR-2B",
+      "Represents clients in GST appeals before GST Appellate Authority"
+    ],
+    image: sakshiImage
   },
   {
     id: 4,
     name: "CA Anuj Jain",
-    designation: "Partner",
+    designation: "Partner, Income Tax, GST Audit & IT Systems",
+    membershipNo: "457485",
+    qualifications: ["B.Com", "ACA", "DISA (ICA)", "AICA Level-1"],
+    experienceYears: "4+",
+    contact: "+91-6266395486",
+    specializations: [
+      "Income Tax",
+      "GST Audit",
+      "IT Systems"
+    ],
+    experience: "Income tax expertise with technology-oriented approach to audit",
+    expertise: [
+      "Income tax advisory for individuals, HUFs, partnership firms, LLPs, and companies",
+      "ITR preparation and filing, advance tax scheduling, TDS compliance",
+      "Capital gains tax planning and tax audit under Section 44AB",
+      "Represents clients before ITO, ACIT, DCIT, and CIT(A) in assessment proceedings",
+      "Uses data analysis to evaluate large transaction datasets with DISA and AICA Level-1"
+    ],
     image: anujImage
   },
   {
     id: 5,
-    name: "CA Sakshi Agrawal",
-    designation: "Partner",
-    image: sakshiImage
+    name: "CA Vinamra Shrivastava",
+    designation: "Partner, Management Audit & Risk",
+    membershipNo: "457411",
+    qualifications: ["B.Com", "ACA", "AICA Level-1"],
+    experienceYears: "4+",
+    contact: "+91-7987914958",
+    specializations: [
+      "Management Audit",
+      "Enterprise Risk",
+      "Stock Audit"
+    ],
+    experience: "Management audit and enterprise risk practice with focus on operational reality",
+    expertise: [
+      "Specializes in stock audits for bank lending against inventory",
+      "Independent verification of pledged stock existence, valuation, and condition",
+      "Stock audits under RBI guidelines for manufacturing, trading, and agribusiness clients",
+      "Management audit examining operational processes and control effectiveness",
+      "Enterprise risk assessment and control gap analysis"
+    ],
+    image: vinamraImage
+  },
+  {
+    id: 6,
+    name: "CA Archit Saxena",
+    designation: "Partner, Internal Audit & Project Evaluation",
+    membershipNo: "471369",
+    qualifications: ["B.Com", "ACA", "AICA Level-1"],
+    experienceYears: "3+",
+    contact: "+91-9806414224",
+    specializations: [
+      "Internal Audit",
+      "Statutory Audit",
+      "Project Evaluation"
+    ],
+    experience: "Internal audits, statutory audits, and project evaluations with risk-based approach",
+    expertise: [
+      "Internal audit (government and private sector)",
+      "Statutory audit",
+      "Project evaluation and monitoring",
+      "Risk-based audit framework",
+      "Government audit (GFR, CAG standards, CVC/CPPP compliance)",
+      "Deviation analysis and management reporting",
+      "Public procurement guidelines compliance",
+      "Scheme-specific monitoring frameworks"
+    ],
+    bio: "CA Archit Saxena focuses on internal audits, statutory audits, and project evaluations - assignments that require both technical audit discipline and a genuine understanding of how real organizations work. He brings a risk-based approach to every engagement: before designing the audit scope, he spends time understanding the client's specific risk landscape. That way, audit work is concentrated where the real exposures are, rather than spread thinly across everything.\n\nHis experience covers both government assignments and private sector work. Government audit assignments operate under a distinct framework - General Financial Rules (GFR), CAG audit standards, public procurement guidelines (CVC and CPPP requirements), and scheme-specific monitoring frameworks. Private sector assignments focus more on commercial risk, profitability drivers, internal controls over financial reporting, and operational efficiency.\n\nCA Archit's strength in deviation analysis - finding where actual outcomes differ from plans, targets, or budgets - makes his audit reports genuinely useful for management, not just for compliance. The best internal audit report is one that management reads, discusses, and acts on. That is the standard he aims for.",
+    image: architImage
   }
 ];
 

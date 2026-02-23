@@ -88,13 +88,13 @@ export const whyChooseAVMS = [
   {
     id: 1,
     title: "Technical Expertise",
-    description: "RBI empaneled, C&AG registered, and led by CA Anup Shrivastava (CISA, FAFD) — we handle complex, regulated assignments",
+    description: "RBI empaneled, C&AG registered, and led by CA Anup Shrivastava (CISA, FAFD) - we handle complex, regulated assignments",
     icon: "FaCertificate"
   },
   {
     id: 2,
     title: "Multi-Industry Experience",
-    description: "Over 22 industries served in 30+ years — banking, government, manufacturing, NGOs, real estate, IT, and more",
+    description: "Over 22 industries served in 30+ years - banking, government, manufacturing, NGOs, real estate, IT, and more",
     icon: "FaChartLine"
   },
   {

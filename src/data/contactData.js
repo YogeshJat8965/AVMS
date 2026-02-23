@@ -2,8 +2,8 @@
 
 export const contactIntro = {
   heading: "Get in Touch With AVMS & Associates",
-  description: "We work with clients across Bhopal, Madhya Pradesh, and Central India — and for specialized assignments, across India. Whether you have a question about a tax notice, need help with a GST filing, want to discuss a statutory audit, or are starting a new business and need to get the structure right from day one — reach out. A real person will respond.",
-  responseTime: "We typically respond to email inquiries within one business day. For time-sensitive matters — a GST notice deadline, an upcoming audit, or an urgent compliance requirement — please call directly."
+  description: "We work with clients across Bhopal, Madhya Pradesh, and Central India - and for specialized assignments, across India. Whether you have a question about a tax notice, need help with a GST filing, want to discuss a statutory audit, or are starting a new business and need to get the structure right from day one - reach out. A real person will respond.",
+  responseTime: "We typically respond to email inquiries within one business day. For time-sensitive matters - a GST notice deadline, an upcoming audit, or an urgent compliance requirement - please call directly."
 };
 
 export const contactDetails = {

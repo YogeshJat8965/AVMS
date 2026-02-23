@@ -19,13 +19,13 @@ export const services = [
     description: "Income tax compliance in India is not optional, and mistakes are expensive. Whether you are filing an individual return under Section 139(1) of the Income Tax Act, 1961, responding to a scrutiny notice under Section 143(2), or dealing with an addition made by the Assessing Officer under Section 147, you need someone who knows the law, the procedure, and the practical realities of dealing with the Income Tax Department.",
     servicesInclude: [
       "ITR filing for individuals, firms, LLPs, companies (all ITR forms)",
-      "Tax planning and advisory — minimizing liability within legal provisions",
+      "Tax planning and advisory - minimizing liability within legal provisions",
       "Representation before Income Tax Officers (ITO), ACIT/DCIT, CIT(Appeals), ITAT",
       "Handling scrutiny assessments, notices under Section 143(2), 148, 142(1)",
-      "TDS compliance — return filing, mismatch rectification, lower deduction certificates",
+      "TDS compliance - return filing, mismatch rectification, lower deduction certificates",
       "Capital gains planning under Sections 54, 54F, 54EC",
-      "Income from house property — claiming deductions and handling deemed ownership issues",
-      "Business income computation — allowable and disallowable expenses under Section 37",
+      "Income from house property - claiming deductions and handling deemed ownership issues",
+      "Business income computation - allowable and disallowable expenses under Section 37",
       "Advance tax and self-assessment tax calculation",
       "Penalty and prosecution defense under Sections 270A and 276C"
     ],
@@ -38,7 +38,7 @@ export const services = [
     slug: "gst-compliance",
     icon: "FaFileInvoice",
     shortDescription: "Complete GST compliance, returns filing, ITC reconciliation, and GST litigation support",
-    description: "The Goods and Services Tax regime, introduced in 2017, was supposed to simplify indirect taxation. In practice, it brought compliance complexity that many businesses were not prepared for — monthly returns, input tax credit reconciliation, e-invoicing, reverse charge, rate disputes, place of supply confusion, and notices for mismatches that the taxpayer did not even know existed.",
+    description: "The Goods and Services Tax regime, introduced in 2017, was supposed to simplify indirect taxation. In practice, it brought compliance complexity that many businesses were not prepared for - monthly returns, input tax credit reconciliation, e-invoicing, reverse charge, rate disputes, place of supply confusion, and notices for mismatches that the taxpayer did not even know existed.",
     servicesInclude: [
       "GST registration (new and migration from old indirect tax regime)",
       "Monthly GSTR-1 and GSTR-3B filing",
@@ -46,9 +46,9 @@ export const services = [
       "Annual return (GSTR-9) and reconciliation statement (GSTR-9C with statutory audit)",
       "Input Tax Credit (ITC) reconciliation and GSTR-2B review",
       "E-invoicing compliance for businesses above the turnover threshold",
-      "GST notices — reply drafting for mismatch notices, show cause notices, demand orders",
-      "GST refund filing — export refunds, inverted duty structure refunds",
-      "GST litigation — representation before Joint Commissioner, Commissioner (Appeals), GST Appellate Tribunal",
+      "GST notices - reply drafting for mismatch notices, show cause notices, demand orders",
+      "GST refund filing - export refunds, inverted duty structure refunds",
+      "GST litigation - representation before Joint Commissioner, Commissioner (Appeals), GST Appellate Tribunal",
       "Industry-specific GST rate classification guidance (particularly for food processing, textiles, real estate, construction)"
     ],
     image: advisoryImg,
@@ -60,13 +60,13 @@ export const services = [
     slug: "corporate-compliance",
     icon: "FaBuilding",
     shortDescription: "ROC filings, board meetings, statutory compliance, and Companies Act requirements",
-    description: "If your business is registered as a private limited company or a public limited company under the Companies Act, 2013, you have ongoing compliance obligations — annual filings with the Registrar of Companies (ROC), board meetings, maintenance of statutory registers, director KYC updates, and adherence to accounting standards. Miss a filing deadline, fail to hold board meetings, or neglect director disclosure requirements, and the penalties accumulate quickly.",
+    description: "If your business is registered as a private limited company or a public limited company under the Companies Act, 2013, you have ongoing compliance obligations - annual filings with the Registrar of Companies (ROC), board meetings, maintenance of statutory registers, director KYC updates, and adherence to accounting standards. Miss a filing deadline, fail to hold board meetings, or neglect director disclosure requirements, and the penalties accumulate quickly.",
     servicesInclude: [
-      "ROC annual filing — AOC-4 (financials), MGT-7 (annual return)",
+      "ROC annual filing - AOC-4 (financials), MGT-7 (annual return)",
       "DIR-3 KYC filing for directors",
-      "Board meeting compliance — maintaining statutory gap between meetings",
+      "Board meeting compliance - maintaining statutory gap between meetings",
       "Preparation and filing of board resolutions and minutes",
-      "Share capital compliance — allotment, transfer, transmission",
+      "Share capital compliance - allotment, transfer, transmission",
       "Secretarial compliance for private limited companies",
       "Audit under Section 139 of the Companies Act",
       "Related party transaction compliance under Section 188",
@@ -81,7 +81,7 @@ export const services = [
     slug: "accounting-bookkeeping",
     icon: "FaBook",
     shortDescription: "Complete accounting services, Tally implementation, financial statements, and bookkeeping",
-    description: "Good accounting is the foundation of tax compliance, audit readiness, and sound business decision-making. If your books are not maintained properly — transactions unrecorded, bank reconciliations pending, expenses unsupported by invoices — your auditor cannot certify your books, your tax return will be inaccurate, and your business will lack the financial data it needs to grow responsibly.",
+    description: "Good accounting is the foundation of tax compliance, audit readiness, and sound business decision-making. If your books are not maintained properly - transactions unrecorded, bank reconciliations pending, expenses unsupported by invoices - your auditor cannot certify your books, your tax return will be inaccurate, and your business will lack the financial data it needs to grow responsibly.",
     servicesInclude: [
       "Day-to-day bookkeeping using Tally ERP or other accounting software",
       "Monthly, quarterly, and annual accounts preparation",
@@ -102,14 +102,14 @@ export const services = [
     slug: "audit-services",
     icon: "FaClipboardCheck",
     shortDescription: "Statutory, Internal, Concurrent, Bank Branch, Tax, and IS Audits",
-    description: "Audit is our core competency. Statutory audit, internal audit, concurrent audit, tax audit, bank branch audit, stock audit, IS audit — these are not interchangeable terms. Each serves a different regulatory or management purpose, is governed by a different set of professional standards, and delivers a different kind of assurance.",
+    description: "Audit is our core competency. Statutory audit, internal audit, concurrent audit, tax audit, bank branch audit, stock audit, IS audit - these are not interchangeable terms. Each serves a different regulatory or management purpose, is governed by a different set of professional standards, and delivers a different kind of assurance.",
     servicesInclude: [
-      "Statutory Audit — Under Section 139 of the Companies Act, 2013",
-      "Internal Audit — Mandatory under Section 138 for certain companies",
-      "Concurrent Audit — Real-time audit for banks, reviews transactions daily/weekly",
-      "Bank Branch Audit — Statutory audit for banks under Banking Regulation Act, 1949",
-      "Tax Audit — Under Section 44AB of the Income Tax Act",
-      "Information Systems Audit — For banks under RBI guidelines, conducted by CISA-qualified auditors"
+      "Statutory Audit - Under Section 139 of the Companies Act, 2013",
+      "Internal Audit - Mandatory under Section 138 for certain companies",
+      "Concurrent Audit - Real-time audit for banks, reviews transactions daily/weekly",
+      "Bank Branch Audit - Statutory audit for banks under Banking Regulation Act, 1949",
+      "Tax Audit - Under Section 44AB of the Income Tax Act",
+      "Information Systems Audit - For banks under RBI guidelines, conducted by CISA-qualified auditors"
     ],
     subServices: [
       {
@@ -158,8 +158,8 @@ export const services = [
     slug: "forensic-audit",
     icon: "FaSearchDollar",
     shortDescription: "Fraud investigation, fund flow analysis, and financial irregularity detection",
-    description: "When financial irregularities are suspected — fund diversion, fraudulent invoicing, undisclosed liabilities, ghost employees on the payroll, round-tripping of funds — a standard statutory audit is not designed to detect them. Forensic audit is.",
-    leadBy: "CA Anup Shrivastava (FAFD — Fellow in Anti-Fraud and Forensics from ICAI)",
+    description: "When financial irregularities are suspected - fund diversion, fraudulent invoicing, undisclosed liabilities, ghost employees on the payroll, round-tripping of funds - a standard statutory audit is not designed to detect them. Forensic audit is.",
+    leadBy: "CA Anup Shrivastava (FAFD - Fellow in Anti-Fraud and Forensics from ICAI)",
     servicesInclude: [
       "Investigation of suspected fraud or financial misconduct",
       "Fund flow analysis and tracing diverted amounts",
@@ -199,7 +199,7 @@ export const services = [
     slug: "ngo-trust-audit",
     icon: "FaHandsHelping",
     shortDescription: "Audit and compliance for societies, trusts, Section 8 companies, and FCRA compliance",
-    description: "Registered societies, charitable trusts, and Section 8 companies that work in the development sector face audit requirements from multiple sources — the Income Tax Department (for 12A/80G compliance), the Ministry of Home Affairs (for FCRA compliance), donor agencies (requiring financial and compliance audits), and the Companies Act (for Section 8 companies).",
+    description: "Registered societies, charitable trusts, and Section 8 companies that work in the development sector face audit requirements from multiple sources - the Income Tax Department (for 12A/80G compliance), the Ministry of Home Affairs (for FCRA compliance), donor agencies (requiring financial and compliance audits), and the Companies Act (for Section 8 companies).",
     servicesInclude: [
       "Statutory audit for trusts, societies, and Section 8 companies",
       "12A/12AB registration for income tax exemption",
@@ -223,7 +223,7 @@ export const services = [
       "Physical verification of hypothecated stocks at the borrower's premises",
       "Matching physical stock with book stocks as per the borrower's accounts",
       "Verification of stock valuation methods and their consistency with the applicable Accounting Standards and the bank's sanction terms",
-      "Assessment of stock quality, usability, and age — identifying obsolete or non-moving stock",
+      "Assessment of stock quality, usability, and age - identifying obsolete or non-moving stock",
       "Review of insurance coverage on hypothecated stocks",
       "Reporting in the format required by the specific lending institution, aligned with RBI guidelines on stock audit reporting"
     ],
@@ -236,15 +236,15 @@ export const services = [
     slug: "consultancy",
     icon: "FaUserTie",
     shortDescription: "Business structuring, financial planning, due diligence, and strategic advisory",
-    description: "Beyond audit and compliance, businesses need guidance. How should a new business be structured for tax efficiency — as a proprietorship, a partnership, an LLP, or a private limited company? What is the right financial model for a bank loan application? How do you improve internal controls without slowing down operations? After thirty years and 22 industries, we understand how businesses work, where they tend to struggle, and what kind of professional guidance actually helps at each stage.",
+    description: "Beyond audit and compliance, businesses need guidance. How should a new business be structured for tax efficiency - as a proprietorship, a partnership, an LLP, or a private limited company? What is the right financial model for a bank loan application? How do you improve internal controls without slowing down operations? After thirty years and 22 industries, we understand how businesses work, where they tend to struggle, and what kind of professional guidance actually helps at each stage.",
     servicesInclude: [
-      "Business structuring — choosing the right entity type (proprietorship, partnership, LLP, Pvt Ltd) based on tax implications, liability requirements, capital plans, and regulatory context",
-      "Pre-audit review and financial cleanup — reviewing books before a statutory or bank audit to identify and resolve discrepancies",
-      "Project report preparation — detailed financial projections, CMA (Credit Monitoring Arrangement) data, and project viability reports for bank loan and term loan applications",
-      "Financial due diligence — for acquisitions, investments, or business combinations; examining target company accounts for undisclosed liabilities or irregularities",
-      "MIS design and review — helping businesses build management information systems that produce reliable, timely financial data for decision-making",
-      "Cost audit and cost reduction advisory — for manufacturing businesses; identifying where costs can be reduced without compromising quality or compliance",
-      "Succession planning — for family businesses; advising on the legal, tax, and governance aspects of ownership transition"
+      "Business structuring - choosing the right entity type (proprietorship, partnership, LLP, Pvt Ltd) based on tax implications, liability requirements, capital plans, and regulatory context",
+      "Pre-audit review and financial cleanup - reviewing books before a statutory or bank audit to identify and resolve discrepancies",
+      "Project report preparation - detailed financial projections, CMA (Credit Monitoring Arrangement) data, and project viability reports for bank loan and term loan applications",
+      "Financial due diligence - for acquisitions, investments, or business combinations; examining target company accounts for undisclosed liabilities or irregularities",
+      "MIS design and review - helping businesses build management information systems that produce reliable, timely financial data for decision-making",
+      "Cost audit and cost reduction advisory - for manufacturing businesses; identifying where costs can be reduced without compromising quality or compliance",
+      "Succession planning - for family businesses; advising on the legal, tax, and governance aspects of ownership transition"
     ],
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&fit=crop",
     category: "Advisory"

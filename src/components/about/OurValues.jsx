@@ -12,7 +12,7 @@ const OurValues = () => {
     {
       icon: FaBook,
       title: "We stay current so our clients don't have to.",
-      description: "The GST framework introduced in 2017 under the Central Goods and Services Tax Act has been amended and clarified repeatedly through circulars, notifications, and council decisions. The Income Tax Act, 1961 sees changes in nearly every Union Budget. The Companies Act, 2013 has seen significant amendments including the Companies (Amendment) Acts of 2017, 2019, and 2020. Keeping up with all of this is a full-time job — and it is ours, not yours."
+      description: "The GST framework introduced in 2017 under the Central Goods and Services Tax Act has been amended and clarified repeatedly through circulars, notifications, and council decisions. The Income Tax Act, 1961 sees changes in nearly every Union Budget. The Companies Act, 2013 has seen significant amendments including the Companies (Amendment) Acts of 2017, 2019, and 2020. Keeping up with all of this is a full-time job - and it is ours, not yours."
     },
     {
       icon: FaLightbulb,
@@ -22,7 +22,7 @@ const OurValues = () => {
     {
       icon: FaLock,
       title: "What you share with us stays with us.",
-      description: "Client confidentiality is an absolute obligation under the ICAI Code of Ethics. We take it seriously, and every member of our team — partners and staff — understands that. No client information is ever shared, discussed, or referenced outside the engagement without explicit written consent."
+      description: "Client confidentiality is an absolute obligation under the ICAI Code of Ethics. We take it seriously, and every member of our team - partners and staff - understands that. No client information is ever shared, discussed, or referenced outside the engagement without explicit written consent."
     }
   ];
 
@@ -39,7 +39,7 @@ const OurValues = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-4">
-              Our Values — In Plain Language
+              Our Values
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-secondary-500 mx-auto"></div>
           </motion.div>

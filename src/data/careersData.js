@@ -2,8 +2,8 @@
 
 export const careersIntro = {
   heading: "Build Your CA Career With Us",
-  description: "AVMS & Associates is a firm where serious accounting work happens. We are not a compliance factory that processes returns in bulk and moves on. We work on statutory bank audits, forensic investigations, government assignments, GST disputes, and complex income tax matters — the kind of work that actually builds a professional career.",
-  location: "We are based in Bhopal. If you want to do substantive, varied, technically demanding work — without the cost of living and relentless pace of a Metro city — we are worth speaking to."
+  description: "AVMS & Associates is a firm where serious accounting work happens. We are not a compliance factory that processes returns in bulk and moves on. We work on statutory bank audits, forensic investigations, government assignments, GST disputes, and complex income tax matters - the kind of work that actually builds a professional career.",
+  location: "We are based in Bhopal. If you want to do substantive, varied, technically demanding work - without the cost of living and relentless pace of a Metro city - we are worth speaking to."
 };
 
 export const whatWeLookFor = {
@@ -22,22 +22,22 @@ export const whatWeLookFor = {
     },
     {
       id: 3,
-      quality: "Attention to detail — audit and tax work has low tolerance for errors",
+      quality: "Attention to detail - audit and tax work has low tolerance for errors",
       icon: "FaSearch"
     },
     {
       id: 4,
-      quality: "Integrity — non-negotiable, in every sense",
+      quality: "Integrity - non-negotiable, in every sense",
       icon: "FaShieldAlt"
     },
     {
       id: 5,
-      quality: "Clear communication — you will be working directly with clients, and they need to understand what you are telling them",
+      quality: "Clear communication - you will be working directly with clients, and they need to understand what you are telling them",
       icon: "FaComments"
     },
     {
       id: 6,
-      quality: "Willingness to learn continuously — regulations change, technology changes, and the profession changes with them",
+      quality: "Willingness to learn continuously - regulations change, technology changes, and the profession changes with them",
       icon: "FaGraduationCap"
     }
   ]
@@ -108,7 +108,7 @@ export const currentOpportunities = [
 
 export const howToApply = {
   heading: "How to Apply",
-  description: "Send your resume and a brief note about yourself — what you have done, what you want to do, and why you think AVMS & Associates is the right place — to:",
+  description: "Send your resume and a brief note about yourself - what you have done, what you want to do, and why you think AVMS & Associates is the right place - to:",
   email: "ca.avms@gmail.com",
   mobile: "+91-7222909440",
   commitment: "We read every application personally. We will get back to you within a week. We promise good mentorship, serious work, and the opportunity to develop as a professional in one of the most respected accounting practices in Central India."

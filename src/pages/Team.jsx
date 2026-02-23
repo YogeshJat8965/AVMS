@@ -37,9 +37,9 @@ const Team = () => {
       contact: "+91-9827210226",
       image: leadPartner.image,
       certBadges: ["CISA", "FAFD", "DISA", "CCAB"],
-      description: "CA Anup Shrivastava founded AVMS & Associates in 1993 and has spent the three decades since building one of the most credential-rich audit practices in Central India. His qualifications span every major dimension of modern audit work — from financial statement assurance to forensic investigation to technology system evaluation.",
+      description: "CA Anup Shrivastava founded AVMS & Associates in 1993 and has spent the three decades since building one of the most credential-rich audit practices in Central India. His qualifications span every major dimension of modern audit work - from financial statement assurance to forensic investigation to technology system evaluation.",
       expertise: [
-        "Holds the Certified Information Systems Auditor (CISA) certification from ISACA, USA — a globally recognized credential for IT systems, controls, and processes evaluation",
+        "Holds the Certified Information Systems Auditor (CISA) certification from ISACA, USA - a globally recognized credential for IT systems, controls, and processes evaluation",
         "FAFD-certified (Forensic Accounting and Fraud Detection) with deep experience in investigating financial fraud and tracing misappropriated funds",
         "Led statutory bank audit assignments for scheduled commercial banks over three decades",
         "Conducted forensic investigations commissioned by banking institutions and government bodies",
@@ -57,7 +57,7 @@ const Team = () => {
       contact: "+91-9827016895",
       image: teamMembers[1]?.image,
       certBadges: ["FCA", "DISA", "CCAB"],
-      description: "CA Sudeep Moitra is a Fellow of ICAI with over two decades of focused experience in statutory audit, system audit, and bank audit assignments. He is DISA-qualified under ICAI — a professional certification specifically designed for Chartered Accountants who work with information systems and technology-driven financial environments.",
+      description: "CA Sudeep Moitra is a Fellow of ICAI with over two decades of focused experience in statutory audit, system audit, and bank audit assignments. He is DISA-qualified under ICAI - a professional certification specifically designed for Chartered Accountants who work with information systems and technology-driven financial environments.",
       expertise: [
         "Primary domain in banking with statutory and concurrent audit assignments for public sector banks",
         "Expert in examining lending decisions, KYC compliance, bank-wide MIS systems, and RBI compliance frameworks",
@@ -68,6 +68,26 @@ const Team = () => {
     },
     {
       id: 3,
+      name: "CA Archit Saxena",
+      title: "Partner, Internal Audit & Project Evaluation",
+      icai: "471369",
+      qualifications: "B.Com, ACA, AICA Level-1",
+      experience: "3+ Years",
+      contact: "+91-9806414224",
+      image: teamMembers.find(m => m.name === "CA Archit Saxena")?.image,
+      certBadges: ["ACA", "AICA"],
+      description: "CA Archit Saxena focuses on internal audits, statutory audits, and project evaluations - assignments that require both technical audit discipline and a genuine understanding of how real organizations work. He brings a risk-based approach to every engagement: before designing the audit scope, he spends time understanding the client's specific risk landscape. That way, audit work is concentrated where the real exposures are, rather than spread thinly across everything.",
+      expertise: [
+        "His experience covers both government assignments and private sector work. Government audit assignments operate under a distinct framework - General Financial Rules (GFR), CAG audit standards, public procurement guidelines (CVC and CPPP requirements), and scheme-specific monitoring frameworks",
+        "Private sector assignments focus more on commercial risk, profitability drivers, internal controls over financial reporting, and operational efficiency",
+        "CA Archit's strength in deviation analysis - finding where actual outcomes differ from plans, targets, or budgets - makes his audit reports genuinely useful for management, not just for compliance",
+        "Specializes in internal audit (government and private sector), statutory audit, and project evaluation with risk-based framework",
+        "Expert in public procurement guidelines compliance, scheme-specific monitoring frameworks, and management reporting",
+        "The best internal audit report is one that management reads, discusses, and acts on. That is the standard he aims for"
+      ]
+    },
+    {
+      id: 4,
       name: "CA Sakshi Agrawal",
       title: "Partner, Corporate Law, GST & Assurance",
       icai: "427741",
@@ -86,7 +106,7 @@ const Team = () => {
       ]
     },
     {
-      id: 4,
+      id: 5,
       name: "CA Anuj Jain",
       title: "Partner, Income Tax, GST Audit & IT Systems",
       icai: "457485",
@@ -95,7 +115,7 @@ const Team = () => {
       contact: "+91-6266395486",
       image: teamMembers.find(m => m.name === "CA Anuj Jain")?.image,
       certBadges: ["ACA", "DISA", "AICA"],
-      description: "CA Anuj Jain combines income tax expertise with a technology-oriented approach to audit — a combination that is increasingly valuable as tax authorities deploy data analytics to identify discrepancies in returns.",
+      description: "CA Anuj Jain combines income tax expertise with a technology-oriented approach to audit - a combination that is increasingly valuable as tax authorities deploy data analytics to identify discrepancies in returns.",
       expertise: [
         "Income tax advisory for individuals, HUFs, partnership firms, LLPs, and companies under Income Tax Act, 1961",
         "ITR preparation and filing, advance tax scheduling, TDS compliance (Forms 24Q, 26Q, 27Q, 27EQ)",
@@ -105,16 +125,16 @@ const Team = () => {
       ]
     },
     {
-      id: 5,
+      id: 6,
       name: "CA Vinamra Shrivastava",
       title: "Partner, Management Audit & Risk",
       icai: "457411",
       qualifications: "B.Com, ACA, AICA Level-1",
       experience: "4+ Years",
       contact: "+91-7987914958",
-      image: teamMembers.find(m => m.name === "CA Vinayma Shrivastava")?.image,
+      image: teamMembers.find(m => m.name === "CA Vinamra Shrivastava")?.image,
       certBadges: ["ACA", "AICA"],
-      description: "CA Vinamra Shrivastava leads the firm's management audit and enterprise risk practice. His focus is on the operational reality of businesses — how processes are actually designed and executed, whether controls exist in practice.",
+      description: "CA Vinamra Shrivastava leads the firm's management audit and enterprise risk practice. His focus is on the operational reality of businesses - how processes are actually designed and executed, whether controls exist in practice.",
       expertise: [
         "Specializes in stock audits for bank lending against inventory",
         "Independent verification of pledged stock existence, valuation, and condition",
@@ -143,7 +163,7 @@ const Team = () => {
               The People Behind AVMS & Associates
             </p>
             <p className="text-lg text-blue-200 leading-relaxed">
-              A CA firm is only as good as the professionals who run it. At AVMS & Associates, our partners collectively bring over 80 years of combined experience across audit, taxation, forensic investigation, corporate compliance, and IT system analysis.
+              A CA firm is only as good as the professionals who run it. At AVMS & Associates, our six partners collectively bring over 80 years of combined experience across audit, taxation, forensic investigation, corporate compliance, and IT system analysis.
             </p>
           </motion.div>
         </div>

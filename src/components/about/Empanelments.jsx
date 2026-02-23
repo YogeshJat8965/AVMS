@@ -104,11 +104,11 @@ const Empanelments = () => {
                       </li>
                     ))}
                   </ul>
-                  {empanelment.scope.length > 4 && (
+                  {/* {empanelment.scope.length > 4 && (
                     <p className="text-xs text-gray-500 mt-3 italic">
                       +{empanelment.scope.length - 4} more areas
                     </p>
-                  )}
+                  )} */}
                 </div>
               </motion.div>
             );
@@ -126,7 +126,7 @@ const Empanelments = () => {
           <div className="bg-primary-50 border border-primary-200 rounded-lg p-6 max-w-3xl mx-auto">
             <p className="text-gray-700 leading-relaxed">
               These empanelments and registrations enable us to undertake specialized assignments 
-              in banking, government, and regulated sectors — assignments that require both technical 
+              in banking, government, and regulated sectors - assignments that require both technical 
               capability and formal authorization from regulatory bodies.
             </p>
           </div>
