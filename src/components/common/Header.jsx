@@ -21,9 +21,9 @@ const Header = () => {
             <img 
               src={logo} 
               alt="AVMS Logo" 
-              className="h-18 w-20 object-contain transition-transform duration-300 self-center"
+              className="h-16 w-18 object-contain transition-transform duration-300 self-center"
             />
-            <span className="text-7xl font-bold group-hover:opacity-90 transition-all duration-300 leading-none self-center" style={{ fontFamily: '"Playfair Display", serif', letterSpacing: '0.05em', color: '#186087' }}>
+            <span className="text-6xl font-bold group-hover:opacity-90 transition-all duration-300 leading-none self-center" style={{ fontFamily: '"Playfair Display", serif', letterSpacing: '0.05em', color: '#186087' }}>
               AVMS
             </span>
           </Link>
