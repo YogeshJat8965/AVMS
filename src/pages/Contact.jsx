@@ -4,6 +4,7 @@ import ContactForm from '../components/contact/ContactForm';
 import ContactInfo from '../components/contact/ContactInfo';
 import ContactFAQ from '../components/contact/ContactFAQ';
 import BackgroundPattern from '../components/common/BackgroundPattern';
+import Testimonials from '../components/common/Testimonials';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { contactIntro } from '../data/contactData';
 
@@ -59,7 +60,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section - Placeholder */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-100">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -131,6 +132,9 @@ const Contact = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* FAQ Section */}
       <ContactFAQ />

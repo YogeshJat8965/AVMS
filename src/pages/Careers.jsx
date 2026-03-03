@@ -139,7 +139,7 @@ const Careers = () => {
       </section>
 
       {/* How to Apply Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50 relative">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-gray-100 to-gray-50 relative">
         <BackgroundPattern variant="accounting" />
         <div className="container-custom relative z-10">
           <motion.div

@@ -170,7 +170,7 @@ const Team = () => {
       </section>
 
       {/* Partners Detailed Profiles */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="container-custom">
           <div className="space-y-20">
             {partnersData.map((partner, index) => (

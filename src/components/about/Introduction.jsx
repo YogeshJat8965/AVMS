@@ -32,12 +32,12 @@ const Introduction = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ color: '#023E60' }}>
               About AVMS & Associates
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-secondary-500 mx-auto mb-6"></div>
-            <p className="text-xl md:text-2xl text-gray-700">
-              {firmInfo.type} | {firmInfo.location}
+            <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: '#f59e0b' }}></div>
+            <p className="text-lg md:text-xl text-gray-600">
+              Chartered Accountants | Bhopal, Madhya Pradesh, India
             </p>
           </motion.div>
 
@@ -50,21 +50,21 @@ const Introduction = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               <div className="prose prose-lg max-w-none">
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  {firmInfo.description}
+                <h2 className="text-2xl font-bold mb-6" style={{ color: '#023E60' }}>
+                  A Legacy of Professional Excellence Since 1993
+                </h2>
+
+                <p className="text-base text-gray-700 leading-relaxed mb-6">
+                  AVMS & Associates was founded with a clear vision to provide ethical, independent, and technically sound professional services. Over the past thirty years, the firm has evolved into a multidisciplinary advisory practice serving diverse sectors across India. From statutory audits of public sector banks to forensic system evaluations and corporate compliance advisory, our journey reflects continuous professional growth and adaptation.
                 </p>
 
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  {firmInfo.specialization}
+                <p className="text-base text-gray-700 leading-relaxed mb-6">
+                  Our philosophy is anchored in integrity, objectivity, and technical rigor. We understand that institutions today operate in a dynamic environment shaped by regulatory changes, digital transformation, and increasing accountability expectations. Our role extends beyond compliance verification to strengthening governance structures, improving internal control systems, and enabling strategic foresight.
                 </p>
 
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-100 to-secondary-100 border border-primary-200 rounded-lg px-6 py-3">
-                  <FaAward className="text-2xl text-primary-600" />
-                  <span className="font-semibold text-primary-700">
-                    {firmInfo.yearsOfExperience} Years of Excellence
-                  </span>
-                </div>
+                <p className="text-base text-gray-700 leading-relaxed mb-6">
+                  The firm is led by experienced Fellows of the Institute of Chartered Accountants of India, supported by a dedicated team of professionals trained in audit, taxation, system analysis, and compliance advisory. We maintain structured engagement methodologies, internal quality review mechanisms, and strict adherence to professional standards. Our enduring relationships with banks, government authorities, and corporate clients are a testament to our commitment to excellence and reliability.
+                </p>
               </div>
             </motion.div>
 
@@ -74,9 +74,9 @@ const Introduction = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <div className="bg-gradient-to-br from-white to-blue-50 rounded-xl shadow-xl p-8 border-2 border-blue-100">
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-6 flex items-center gap-2">
-                  <span className="text-primary-600">✓</span>
+              <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+                <h3 className="text-2xl font-bold mb-6 flex items-center gap-2" style={{ color: '#023E60' }}>
+                  <span style={{ color: '#3b82f6' }}>✓</span>
                   Key Highlights
                 </h3>
 
@@ -89,8 +89,10 @@ const Introduction = () => {
                       transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
                       className="flex items-start gap-3"
                     >
-                      <FaCheckCircle className="text-primary-600 text-xl flex-shrink-0 mt-1" />
-                      <span className="text-gray-700">{highlight}</span>
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: '#3b82f6' }}>
+                        <FaCheckCircle className="text-white text-sm" />
+                      </div>
+                      <span className="text-gray-700 text-base">{highlight}</span>
                     </motion.div>
                   ))}
                 </div>

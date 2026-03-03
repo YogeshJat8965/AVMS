@@ -6,6 +6,7 @@ import Empanelments from '../components/about/Empanelments';
 import OurValues from '../components/about/OurValues';
 import ProfessionalApproach from '../components/about/ProfessionalApproach';
 import AboutFAQ from '../components/about/AboutFAQ';
+import TeamPreview from '../components/about/TeamPreview';
 
 const About = () => {
   return (
@@ -13,23 +14,26 @@ const About = () => {
       {/* Introduction Section */}
       <Introduction />
 
-      {/* Stats Section */}
-      <StatsSection />
+      {/* Team Preview Section */}
+      <TeamPreview />
 
-      {/* Firm History & Journey */}
-      <FirmHistory />
+      {/* Stats Section - Hidden as per client request */}
+      {/* <StatsSection /> */}
 
-      {/* Empanelments Section */}
-      <Empanelments />
+      {/* Firm History & Journey - Hidden as per client request */}
+      {/* <FirmHistory /> */}
 
-      {/* Our Values */}
-      <OurValues />
+      {/* Empanelments Section - Hidden as per client request */}
+      {/* <Empanelments /> */}
 
-      {/* Professional Approach Section */}
-      <ProfessionalApproach />
+      {/* Our Values - Hidden as per client request */}
+      {/* <OurValues /> */}
 
-      {/* FAQ Section */}
-      <AboutFAQ />
+      {/* Professional Approach Section - Hidden as per client request */}
+      {/* <ProfessionalApproach /> */}
+
+      {/* FAQ Section - Hidden as per client request */}
+      {/* <AboutFAQ /> */}
     </div>
   );
 };

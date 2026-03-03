@@ -1,81 +1,63 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  FaUniversity, 
-  FaLandmark, 
   FaGraduationCap, 
-  FaHardHat, 
-  FaIndustry,
-  FaHome,
-  FaAppleAlt,
-  FaSeedling,
-  FaHandHoldingHeart,
+  FaLeaf,
+  FaBook,
   FaTshirt,
-  FaLaptopCode,
-  FaGem,
-  FaArrowRight
+  FaShoppingCart,
+  FaHome,
+  FaTruck,
+  FaHandHoldingHeart,
+  FaCode,
+  FaLightbulb,
+  FaCog,
+  FaTree,
+  FaBullhorn,
+  FaHardHat,
+  FaTractor,
+  FaShippingFast,
+  FaTools,
+  FaIndustry,
+  FaStore,
+  FaNewspaper,
+  FaCity,
+  FaMountain
 } from 'react-icons/fa';
-import Button from '../common/Button';
 import { industries } from '../../data/industriesData';
 
 const IndustriesPreview = () => {
   const iconMap = {
-    FaUniversity: FaUniversity,
-    FaLandmark: FaLandmark,
     FaGraduationCap: FaGraduationCap,
-    FaHardHat: FaHardHat,
-    FaIndustry: FaIndustry,
-    FaHome: FaHome,
-    FaAppleAlt: FaAppleAlt,
-    FaSeedling: FaSeedling,
-    FaHandHoldingHeart: FaHandHoldingHeart,
+    FaLeaf: FaLeaf,
+    FaBook: FaBook,
     FaTshirt: FaTshirt,
-    FaLaptopCode: FaLaptopCode,
-    FaGem: FaGem
+    FaShoppingCart: FaShoppingCart,
+    FaHome: FaHome,
+    FaTruck: FaTruck,
+    FaHandHoldingHeart: FaHandHoldingHeart,
+    FaCode: FaCode,
+    FaLightbulb: FaLightbulb,
+    FaCog: FaCog,
+    FaTree: FaTree,
+    FaBullhorn: FaBullhorn,
+    FaHardHat: FaHardHat,
+    FaTractor: FaTractor,
+    FaShippingFast: FaShippingFast,
+    FaTools: FaTools,
+    FaIndustry: FaIndustry,
+    FaStore: FaStore,
+    FaNewspaper: FaNewspaper,
+    FaCity: FaCity,
+    FaMountain: FaMountain
   };
 
-  // Show first 8 industries on homepage
-  const featuredIndustries = industries.slice(0, 8);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.08
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.4,
-        ease: 'easeOut'
-      }
-    }
-  };
+  // Show all 22 industries on homepage
+  const featuredIndustries = industries;
 
   return (
-    <section className="relative py-16 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `repeating-linear-gradient(
-            -45deg,
-            transparent,
-            transparent 25px,
-            rgba(37, 99, 235, 0.1) 25px,
-            rgba(37, 99, 235, 0.1) 50px
-          )`
-        }}></div>
-      </div>
-      
-      <div className="container-custom relative z-10">
+    <section className="relative py-16 lg:py-24 bg-white">
+      <div className="container-custom">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -84,79 +66,41 @@ const IndustriesPreview = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#023E60' }}>
             Industries We Serve
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            23+ industries served with specialized expertise in regulatory compliance and financial advisory
-          </p>
         </motion.div>
 
         {/* Industries Grid */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          {featuredIndustries.map((industry) => {
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {featuredIndustries.map((industry, index) => {
             const IconComponent = iconMap[industry.icon] || FaIndustry;
             return (
               <motion.div
                 key={industry.id}
-                variants={cardVariants}
-                whileHover={{ 
-                  y: -10, 
-                  boxShadow: '0 20px 40px rgba(0, 0, 0, 0.15)',
-                  scale: 1.02
-                }}
-                className="bg-gradient-to-br from-accent-50 to-white rounded-xl p-6 shadow-md border border-accent-100 hover:border-accent-300 transition-all duration-300 cursor-pointer group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ delay: index * 0.05, duration: 0.5 }}
+                whileHover={{ y: -8, scale: 1.05 }}
+                className="flex flex-col items-center text-center p-4 cursor-pointer group"
               >
-                <Link to="/industries" className="block h-full">
-                  <div className="flex flex-col items-center text-center h-full">
-                    {/* Icon */}
-                    <div className="text-5xl text-accent-600 mb-4 group-hover:text-accent-700 group-hover:scale-110 transition-all duration-300">
-                      <IconComponent />
-                    </div>
+                {/* Icon */}
+                <div 
+                  className="w-16 h-16 rounded-full flex items-center justify-center mb-3 transition-all duration-300 group-hover:shadow-lg"
+                  style={{ backgroundColor: '#023E60' }}
+                >
+                  <IconComponent className="text-2xl text-white transition-transform duration-300 group-hover:scale-110" />
+                </div>
 
-                    {/* Title */}
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-accent-600 transition-colors duration-300">
-                      {industry.title}
-                    </h3>
-
-                    {/* First Highlight */}
-                    {industry.highlights && industry.highlights.length > 0 && (
-                      <p className="text-sm text-gray-600 italic">
-                        {industry.highlights[0]}
-                      </p>
-                    )}
-                  </div>
-                </Link>
+                {/* Title */}
+                <h3 className="text-sm font-semibold leading-tight transition-colors duration-300" style={{ color: '#023E60' }}>
+                  {industry.title}
+                </h3>
               </motion.div>
             );
           })}
-        </motion.div>
-
-        {/* View All Industries Button */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-center"
-        >
-          <Link to="/industries">
-            <Button 
-              variant="primary" 
-              size="lg"
-              icon={<FaArrowRight />}
-              iconPosition="right"
-            >
-              View All Industries
-            </Button>
-          </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -11,19 +11,19 @@ const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
+        staggerChildren: 0.3,
+        delayChildren: 0.2
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.8,
         ease: 'easeOut'
       }
     }
@@ -56,57 +56,53 @@ const Hero = () => {
       </div>
 
       <div className="container-custom relative z-10 w-full">
-        <div className="py-12 md:py-20 lg:py-32">
+        <div className="py-16 md:py-24 lg:py-32">
           <motion.div
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-6xl mx-auto text-center px-4"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
             {/* Main Heading */}
             <motion.h1 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-tight"
               variants={itemVariants}
+              style={{ fontFamily: '"Playfair Display", serif' }}
             >
-              AVMS & Associates
+               Welcome to AVMS
             </motion.h1>
 
             {/* Tagline */}
             <motion.p 
-              className="text-xl md:text-2xl lg:text-3xl mb-4 text-blue-100"
+              className="text-2xl md:text-3xl lg:text-4xl mb-20 text-blue-100 font-light tracking-wide"
               variants={itemVariants}
+              style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic' }}
             >
-              Chartered Accountants
+               Accelerating Value, Magnifying Success
             </motion.p>
 
-            <motion.p 
-              className="text-lg md:text-xl mb-12 text-blue-200"
-              variants={itemVariants}
-            >
-              Bhopal, Madhya Pradesh, India
-            </motion.p>
-
-            {/* Key Credentials Mini Cards */}
-            <motion.div 
-              className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12"
+            {/* Key Credentials Mini Cards - Hidden as per client request */}
+            {/* <motion.div 
+              className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16 max-w-5xl mx-auto"
               variants={itemVariants}
             >
               {keyCredentials.map((cred) => {
                 const IconComponent = iconMap[cred.icon];
                 return (
-                  <div 
+                  <motion.div 
                     key={cred.id}
-                    className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                    className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/30 hover:bg-white/25 hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                    whileHover={{ y: -5 }}
                   >
                     <div className="flex flex-col items-center text-center">
-                      {IconComponent && <IconComponent className="text-3xl mb-2 text-secondary-400" />}
-                      <p className="font-bold text-lg">{cred.credential}</p>
-                      <p className="text-sm text-blue-200">{cred.description}</p>
+                      {IconComponent && <IconComponent className="text-4xl md:text-5xl mb-3 text-yellow-300" />}
+                      <p className="font-bold text-base md:text-lg mb-1">{cred.credential}</p>
+                      <p className="text-xs md:text-sm text-blue-200">{cred.description}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </motion.div>
+            </motion.div> */}
 
             {/* CTA Buttons */}
             <motion.div 
@@ -118,41 +114,11 @@ const Hero = () => {
                   variant="secondary" 
                   size="lg"
                   icon={<FaPhone />}
+                  className="shadow-2xl hover:shadow-yellow-500/50 transform hover:scale-105 transition-all duration-300 px-10 py-4 text-lg"
                 >
                   Get in Touch
                 </Button>
               </Link>
-              <Link to="/services">
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="bg-white/10 border-white text-white hover:bg-white hover:text-primary-700"
-                >
-                  Our Services
-                </Button>
-              </Link>
-            </motion.div>
-
-            {/* Quick Contact Info */}
-            <motion.div 
-              className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center"
-              variants={itemVariants}
-            >
-              <a 
-                href="tel:07552555642" 
-                className="flex items-center gap-2 text-white hover:text-secondary-400 transition-colors duration-300"
-              >
-                <FaPhone />
-                <span>0755-2555642</span>
-              </a>
-              <span className="hidden sm:inline text-white">|</span>
-              <a 
-                href="mailto:ca.avms@gmail.com" 
-                className="flex items-center gap-2 text-white hover:text-secondary-400 transition-colors duration-300"
-              >
-                <FaEnvelope />
-                <span>ca.avms@gmail.com</span>
-              </a>
             </motion.div>
           </motion.div>
         </div>

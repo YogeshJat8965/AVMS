@@ -9,10 +9,11 @@ import {
   FaClipboardCheck,
   FaSearchDollar,
   FaLandmark,
-  FaUniversity,
+  FaHandsHelping,
+  FaWarehouse,
+  FaUserTie,
   FaArrowRight
 } from 'react-icons/fa';
-import Button from '../common/Button';
 import { services } from '../../data/servicesData';
 
 const ServicesPreview = () => {
@@ -24,44 +25,17 @@ const ServicesPreview = () => {
     FaClipboardCheck: FaClipboardCheck,
     FaSearchDollar: FaSearchDollar,
     FaLandmark: FaLandmark,
-    FaUniversity: FaUniversity
+    FaHandsHelping: FaHandsHelping,
+    FaWarehouse: FaWarehouse,
+    FaUserTie: FaUserTie
   };
 
   // Show first 6 services on homepage
   const featuredServices = services.slice(0, 6);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: 'easeOut'
-      }
-    }
-  };
-
   return (
-    <section className="relative py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}></div>
-      </div>
-      
-      <div className="container-custom relative z-10">
+    <section className="relative py-16 lg:py-24 bg-gray-50">
+      <div className="container-custom">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -70,89 +44,65 @@ const ServicesPreview = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#023E60' }}>
             Our Services
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Comprehensive accounting, audit, tax, and compliance services tailored to your business needs
-          </p>
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          {featuredServices.map((service) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredServices.map((service, index) => {
             const IconComponent = iconMap[service.icon] || FaClipboardCheck;
             return (
               <motion.div
                 key={service.id}
-                variants={cardVariants}
-                whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0, 0, 0, 0.12)' }}
-                className="bg-white rounded-xl overflow-hidden shadow-md border-2 border-gray-100 hover:border-primary-300 transition-all duration-300 cursor-pointer group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow duration-300"
               >
-                <Link to="/services" className="block h-full">
-                  {/* Image Header */}
-                  {service.image && (
-                    <div className="relative h-64 overflow-hidden">
-                      <img 
-                        src={service.image} 
-                        alt={service.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      
-                      {/* Icon Badge on Image */}
-                      <div className="absolute top-4 left-4 bg-white p-3 rounded-full shadow-lg">
-                        <IconComponent className="text-2xl text-primary-600" />
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Content */}
-                  <div className="p-6">
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">
-                      {service.title}
-                    </h3>
-                    
-                    {/* Short Description */}
-                    <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3">
-                      {service.shortDescription}
-                    </p>
-
-                    {/* Learn More Link */}
-                    <div className="flex items-center text-primary-600 font-semibold group-hover:text-primary-700">
-                      <span className="mr-2">Learn More</span>
-                      <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
+                <div className="flex gap-4">
+                  {/* Icon */}
+                  <div className="flex-shrink-0">
+                    <div 
+                      className="w-14 h-14 rounded-full flex items-center justify-center"
+                      style={{ backgroundColor: '#023E60' }}
+                    >
+                      <IconComponent className="text-2xl text-white" />
                     </div>
                   </div>
-                </Link>
+
+                  {/* Content */}
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-3" style={{ color: '#023E60' }}>
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 text-base leading-relaxed">
+                      {service.shortDescription}
+                    </p>
+                  </div>
+                </div>
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* View All Services Button */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-center"
+          className="text-center mt-12"
         >
-          <Link to="/services">
-            <Button 
-              variant="primary" 
-              size="lg"
-              icon={<FaArrowRight />}
-              iconPosition="right"
-            >
-              View All Services
-            </Button>
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+            style={{ backgroundColor: '#023E60' }}
+          >
+            <span>View All Services</span>
+            <FaArrowRight className="text-lg group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
         </motion.div>
       </div>

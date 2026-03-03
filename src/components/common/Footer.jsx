@@ -27,7 +27,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 text-white relative overflow-hidden">
+    <footer className="bg-white relative overflow-hidden border-t-2" style={{ borderColor: '#023E60' }}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -35,8 +35,8 @@ const Footer = () => {
             0deg,
             transparent,
             transparent 39px,
-            rgba(255, 255, 255, 0.1) 39px,
-            rgba(255, 255, 255, 0.1) 40px
+            rgba(3, 62, 96, 0.1) 39px,
+            rgba(3, 62, 96, 0.1) 40px
           )`
         }}></div>
       </div>
@@ -55,63 +55,57 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="AVMS Logo" 
-                className="h-12 w-12 object-contain"
+                className="h-16 w-18 object-contain"
               />
-              <h3 className="text-4xl font-bold text-white leading-[3rem]" style={{ fontFamily: '"Playfair Display", serif', letterSpacing: '0.05em' }}>AVMS</h3>
+              <div className="flex flex-col leading-tight">
+                <span className="text-xl lg:text-[16px] font-bold" style={{ fontFamily: '"Playfair Display", serif', letterSpacing: '0.05em', color: '#186087' }}>
+                  AVMS & ASSOCIATES
+                </span>
+                <span className="text-xl lg:text-[12px] font-semibold tracking-wider" style={{ color: '#C4D5B2' }}>
+                  CHARTERED ACCOUNTANTS
+                </span>
+              </div>
             </div>
-            <p className="text-white text-sm leading-relaxed">
-              Chartered Accountants<br />
+            <p className="text-gray-700 text-sm leading-relaxed">
               Bhopal, Madhya Pradesh, India
             </p>
-            <div className="mt-4 flex items-start text-white text-sm">
-              <FaMapMarkerAlt className="mr-2 mt-1 flex-shrink-0 text-secondary-400" />
-              <span>Serving clients across India with 30+ years of excellence</span>
+            <div className="mt-4 flex items-start text-gray-600 text-sm">
+              <FaMapMarkerAlt className="mr-2 mt-1 flex-shrink-0" style={{ color: '#159645' }} />
+              <span>Professional excellence since 1993 - serving clients across 22+ industries</span>
             </div>
           </motion.div>
 
           {/* Quick Links */}
           <motion.div variants={itemVariants}>
-            <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4" style={{ color: '#023E60' }}>Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-white hover:text-secondary-400 transition-colors duration-300 flex items-center group">
-                  <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
+                <Link to="/" className="text-gray-700 transition-colors duration-300 flex items-center group" style={{ hover: { color: '#159645' } }}>
+                  <span className="mr-2 group-hover:mr-3 transition-all duration-300" style={{ color: '#159645' }}>→</span>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-white hover:text-secondary-400 transition-colors duration-300 flex items-center group">
-                  <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
+                <Link to="/about" className="text-gray-700 transition-colors duration-300 flex items-center group" style={{ hover: { color: '#159645' } }}>
+                  <span className="mr-2 group-hover:mr-3 transition-all duration-300" style={{ color: '#159645' }}>→</span>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/team" className="text-white hover:text-accent-400 transition-colors duration-300 flex items-center group">
-                  <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
-                  Our Team
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-white hover:text-secondary-400 transition-colors duration-300 flex items-center group">
-                  <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
+                <Link to="/services" className="text-gray-700 transition-colors duration-300 flex items-center group" style={{ hover: { color: '#159645' } }}>
+                  <span className="mr-2 group-hover:mr-3 transition-all duration-300" style={{ color: '#159645' }}>→</span>
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/industries" className="text-white hover:text-secondary-400 transition-colors duration-300 flex items-center group">
-                  <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
-                  Industries
-                </Link>
-              </li>
-              <li>
-                <Link to="/careers" className="text-white hover:text-secondary-400 transition-colors duration-300 flex items-center group">
-                  <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
+                <Link to="/careers" className="text-gray-700 transition-colors duration-300 flex items-center group" style={{ hover: { color: '#159645' } }}>
+                  <span className="mr-2 group-hover:mr-3 transition-all duration-300" style={{ color: '#159645' }}>→</span>
                   Careers
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-white hover:text-secondary-400 transition-colors duration-300 flex items-center group">
-                  <span className="mr-2 group-hover:mr-3 transition-all duration-300">→</span>
+                <Link to="/contact" className="text-gray-700 transition-colors duration-300 flex items-center group" style={{ hover: { color: '#159645' } }}>
+                  <span className="mr-2 group-hover:mr-3 transition-all duration-300" style={{ color: '#159645' }}>→</span>
                   Contact
                 </Link>
               </li>
@@ -120,60 +114,64 @@ const Footer = () => {
 
           {/* Services */}
           <motion.div variants={itemVariants}>
-            <h4 className="text-lg font-semibold mb-4 text-white">Our Services</h4>
-            <ul className="space-y-2 text-white text-sm">
+            <h4 className="text-lg font-semibold mb-4" style={{ color: '#023E60' }}>Our Services</h4>
+            <ul className="space-y-2 text-gray-700 text-sm">
               <li className="flex items-start">
-                <span className="mr-2 text-secondary-400">•</span>
-                Income Tax Services
+                <span className="mr-2" style={{ color: '#159645' }}>•</span>
+                Income Tax & GST Services
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-secondary-400">•</span>
-                GST Compliance
+                <span className="mr-2" style={{ color: '#159645' }}>•</span>
+                Statutory & Bank Audits
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-secondary-400">•</span>
-                Statutory & Internal Audit
+                <span className="mr-2" style={{ color: '#159645' }}>•</span>
+                Forensic Audit & Investigation
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-secondary-400">•</span>
+                <span className="mr-2" style={{ color: '#159645' }}>•</span>
                 Corporate Compliance
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-secondary-400">•</span>
-                Accounting & Bookkeeping
+                <span className="mr-2" style={{ color: '#159645' }}>•</span>
+                Stock & Management Audit
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-secondary-400">•</span>
-                Management Consultancy
+                <span className="mr-2" style={{ color: '#159645' }}>•</span>
+                Government & NGO Audits
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2" style={{ color: '#159645' }}>•</span>
+                Business Advisory Services
               </li>
             </ul>
           </motion.div>
 
           {/* Contact Info */}
           <motion.div variants={itemVariants}>
-            <h4 className="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+            <h4 className="text-lg font-semibold mb-4" style={{ color: '#023E60' }}>Contact Us</h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center hover:text-secondary-400 transition-colors duration-300">
-                <FaPhone className="mr-3 flex-shrink-0 text-secondary-400" />
-                <a href="tel:07552555642" className="text-white">0755-2555642</a>
+              <li className="flex items-center transition-colors duration-300">
+                <FaPhone className="mr-3 flex-shrink-0" style={{ color: '#159645' }} />
+                <a href="tel:07552555642" className="text-gray-700 hover:text-blue-600">0755-2555642</a>
               </li>
-              <li className="flex items-center hover:text-secondary-400 transition-colors duration-300">
-                <FaPhone className="mr-3 flex-shrink-0 text-secondary-400" />
-                <a href="tel:+917222909440" className="text-white">+91-7222909440</a>
+              <li className="flex items-center transition-colors duration-300">
+                <FaPhone className="mr-3 flex-shrink-0" style={{ color: '#159645' }} />
+                <a href="tel:+917222909440" className="text-gray-700 hover:text-blue-600">+91-7222909440</a>
               </li>
-              <li className="flex items-center hover:text-secondary-400 transition-colors duration-300">
-                <FaEnvelope className="mr-3 flex-shrink-0 text-secondary-400" />
-                <a href="mailto:ca.avms@gmail.com" className="text-white">
+              <li className="flex items-center transition-colors duration-300">
+                <FaEnvelope className="mr-3 flex-shrink-0" style={{ color: '#159645' }} />
+                <a href="mailto:ca.avms@gmail.com" className="text-gray-700 hover:text-blue-600">
                   ca.avms@gmail.com
                 </a>
               </li>
-              <li className="flex items-center hover:text-secondary-400 transition-colors duration-300">
-                <FaLinkedin className="mr-3 flex-shrink-0 text-secondary-400" />
+              <li className="flex items-center transition-colors duration-300">
+                <FaLinkedin className="mr-3 flex-shrink-0" style={{ color: '#159645' }} />
                 <a 
                   href="https://linkedin.com/company/a-v-m-s-associates" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-white"
+                  className="text-gray-700 hover:text-blue-600"
                 >
                   Connect on LinkedIn
                 </a>
@@ -181,12 +179,12 @@ const Footer = () => {
             </ul>
             
             {/* Office Hours */}
-            <div className="mt-6 p-4 bg-gray-800 rounded-lg border border-gray-700">
-              <div className="flex items-center text-secondary-500 mb-2">
+            <div className="mt-6 p-4 rounded-lg border-2" style={{ backgroundColor: '#f0f9ff', borderColor: '#023E60' }}>
+              <div className="flex items-center mb-2" style={{ color: '#023E60' }}>
                 <FaClock className="mr-2" />
                 <span className="font-semibold">Office Hours</span>
               </div>
-              <p className="text-gray-300 text-sm">
+              <p className="text-gray-700 text-sm">
                 Monday to Saturday<br />
                 10:00 AM – 6:00 PM
               </p>
@@ -196,15 +194,16 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <motion.div 
-          className="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400 text-sm"
+          className="border-t mt-10 pt-8 text-center text-gray-600 text-sm"
+          style={{ borderColor: '#023E60' }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <p>&copy; {new Date().getFullYear()} AVMS & Associates. All rights reserved.</p>
-          <p className="mt-2">
-            Empowering businesses with trusted financial expertise since 1990s
+          <p className="font-semibold" style={{ color: '#023E60' }}>&copy; {new Date().getFullYear()} AVMS & Associates. All rights reserved.</p>
+          <p className="mt-2 text-gray-700">
+            Empowering businesses with trusted financial expertise since 1993
           </p>
         </motion.div>
       </div>

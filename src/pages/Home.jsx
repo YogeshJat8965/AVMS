@@ -6,6 +6,7 @@ import WhyChooseUs from '../components/home/WhyChooseUs';
 import ServicesPreview from '../components/home/ServicesPreview';
 import IndustriesPreview from '../components/home/IndustriesPreview';
 import CTASection from '../components/home/CTASection';
+import Testimonials from '../components/common/Testimonials';
 
 const Home = () => {
   return (
@@ -19,8 +20,8 @@ const Home = () => {
       {/* About Preview Section */}
       <AboutPreview />
 
-      {/* Why Choose Us Section */}
-      <WhyChooseUs />
+      {/* Why Choose Us Section - Hidden as per client request */}
+      {/* <WhyChooseUs /> */}
 
       {/* Services Preview Section */}
       <ServicesPreview />
@@ -28,8 +29,11 @@ const Home = () => {
       {/* Industries Preview Section */}
       <IndustriesPreview />
 
-      {/* CTA Section */}
-      <CTASection />
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* CTA Section - Hidden as per client request */}
+      {/* <CTASection /> */}
     </div>
   );
 };

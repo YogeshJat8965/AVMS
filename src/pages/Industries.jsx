@@ -1,53 +1,62 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import IndustryCard from '../components/industries/IndustryCard';
 import IndustriesFAQ from '../components/industries/IndustriesFAQ';
-import industries from '../data/industriesData';
-import Button from '../components/common/Button';
-import { FaPhone } from 'react-icons/fa';
+import { industries } from '../data/industriesData';
+import { 
+  FaGraduationCap, 
+  FaLeaf,
+  FaBook,
+  FaTshirt,
+  FaShoppingCart,
+  FaHome,
+  FaTruck,
+  FaHandHoldingHeart,
+  FaCode,
+  FaLightbulb,
+  FaCog,
+  FaTree,
+  FaBullhorn,
+  FaHardHat,
+  FaTractor,
+  FaShippingFast,
+  FaTools,
+  FaIndustry,
+  FaStore,
+  FaNewspaper,
+  FaCity,
+  FaMountain
+} from 'react-icons/fa';
 
 const Industries = () => {
+  const iconMap = {
+    FaGraduationCap: FaGraduationCap,
+    FaLeaf: FaLeaf,
+    FaBook: FaBook,
+    FaTshirt: FaTshirt,
+    FaShoppingCart: FaShoppingCart,
+    FaHome: FaHome,
+    FaTruck: FaTruck,
+    FaHandHoldingHeart: FaHandHoldingHeart,
+    FaCode: FaCode,
+    FaLightbulb: FaLightbulb,
+    FaCog: FaCog,
+    FaTree: FaTree,
+    FaBullhorn: FaBullhorn,
+    FaHardHat: FaHardHat,
+    FaTractor: FaTractor,
+    FaShippingFast: FaShippingFast,
+    FaTools: FaTools,
+    FaIndustry: FaIndustry,
+    FaStore: FaStore,
+    FaNewspaper: FaNewspaper,
+    FaCity: FaCity,
+    FaMountain: FaMountain
+  };
+
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white py-16 lg:py-24">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
-            >
-              Industries We Serve
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-xl md:text-2xl text-blue-100 mb-8"
-            >
-              23+ Industries Across Banking, Government, Manufacturing, NGOs, and More
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-lg text-blue-200"
-            >
-              Over 30 years of experience serving diverse sectors with specialized audit, tax, and compliance services
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Industries Grid Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -56,26 +65,39 @@ const Industries = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Industry Expertise
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#023E60' }}>
+              Industries We Serve
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Deep domain knowledge across multiple sectors with specialized regulatory compliance and audit experience
-            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={industry.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ delay: index * 0.05, duration: 0.5 }}
-              >
-                <IndustryCard industry={industry} />
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {industries.map((industry, index) => {
+              const IconComponent = iconMap[industry.icon] || FaIndustry;
+              return (
+                <motion.div
+                  key={industry.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.1 }}
+                  transition={{ delay: index * 0.05, duration: 0.5 }}
+                  whileHover={{ y: -8, scale: 1.05 }}
+                  className="flex flex-col items-center text-center p-4 cursor-pointer group"
+                >
+                  {/* Icon */}
+                  <div 
+                    className="w-16 h-16 rounded-full flex items-center justify-center mb-3 transition-all duration-300 group-hover:shadow-lg"
+                    style={{ backgroundColor: '#023E60' }}
+                  >
+                    <IconComponent className="text-2xl text-white transition-transform duration-300 group-hover:scale-110" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-sm font-semibold leading-tight transition-colors duration-300" style={{ color: '#023E60' }}>
+                    {industry.title}
+                  </h3>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

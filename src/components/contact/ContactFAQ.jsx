@@ -5,7 +5,7 @@ import { contactFAQs } from '../../data/faqData';
 
 const ContactFAQ = () => {
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -14,10 +14,10 @@ const ContactFAQ = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Contact FAQ
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-blue-100 max-w-2xl mx-auto">
             Common questions about reaching and working with us
           </p>
         </motion.div>

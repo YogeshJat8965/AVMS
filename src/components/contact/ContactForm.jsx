@@ -7,15 +7,52 @@ import { FaPaperPlane, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
+    organizationName: '',
     email: '',
     phone: '',
-    subject: '',
+    industryType: '',
+    serviceRequired: '',
     message: ''
   });
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+
+  // Industries list
+  const industries = [
+    'Education',
+    'Food Processing',
+    'Government Publishing',
+    'Textile Manufacturing',
+    'FMCG Trading',
+    'Housing & Real Estate',
+    'Retail & Distribution',
+    'NGO/Development Sector',
+    'IT & Software',
+    'Management Advisory Services',
+    'Automotive Tyre',
+    'Plantation & Agro',
+    'Marketing',
+    'Construction & Infrastructure',
+    'Agribusiness',
+    'Manufacturing & Export',
+    'Metal & Manufacturing',
+    'Industrial Products',
+    'Non-Corporate/SME',
+    'Publishing & Media',
+    'Urban Development',
+    'Metals & Mining'
+  ];
+
+  // Services list
+  const services = [
+    'Audit',
+    'Taxation',
+    'Corporate Law',
+    'Startup Advisory',
+    'Others'
+  ];
 
   const validateForm = () => {
     const newErrors = {};
@@ -25,6 +62,11 @@ const ContactForm = () => {
       newErrors.name = 'Name is required';
     } else if (formData.name.trim().length < 2) {
       newErrors.name = 'Name must be at least 2 characters';
+    }
+
+    // Organization Name validation
+    if (!formData.organizationName.trim()) {
+      newErrors.organizationName = 'Organization name is required';
     }
 
     // Email validation
@@ -39,6 +81,16 @@ const ContactForm = () => {
       newErrors.phone = 'Phone number is required';
     } else if (!/^[0-9+\-\s()]{10,}$/.test(formData.phone)) {
       newErrors.phone = 'Please enter a valid phone number';
+    }
+
+    // Industry Type validation
+    if (!formData.industryType) {
+      newErrors.industryType = 'Please select an industry type';
+    }
+
+    // Service Required validation
+    if (!formData.serviceRequired) {
+      newErrors.serviceRequired = 'Please select a service';
     }
 
     // Message validation
@@ -79,9 +131,11 @@ const ContactForm = () => {
 
       const templateParams = {
         from_name: formData.name,
+        organization_name: formData.organizationName,
         from_email: formData.email,
         from_phone: formData.phone,
-        subject: formData.subject || 'No Subject',
+        industry_type: formData.industryType,
+        service_required: formData.serviceRequired,
         message: formData.message,
         to_email: 'yogeshjat8965@gmail.com'
       };
@@ -92,9 +146,11 @@ const ContactForm = () => {
       setSubmitStatus('success');
       setFormData({
         name: '',
+        organizationName: '',
         email: '',
         phone: '',
-        subject: '',
+        industryType: '',
+        serviceRequired: '',
         message: ''
       });
 
@@ -119,7 +175,8 @@ const ContactForm = () => {
       transition={{ duration: 0.6 }}
       className="bg-white rounded-lg shadow-lg p-6 md:p-8"
     >
-      <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+      <h3 className="text-2xl font-bold text-gray-900 mb-2">Request a Consultation</h3>
+      <p className="text-gray-600 mb-6">Fill out the form below and we'll get back to you within one business day</p>
       
       <form onSubmit={handleSubmit} className="space-y-5">
         {/* Name Field */}
@@ -143,68 +200,124 @@ const ContactForm = () => {
           )}
         </div>
 
-        {/* Email Field */}
+        {/* Organization Name Field */}
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-            Email <span className="text-red-500">*</span>
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all ${
-              errors.email ? 'border-red-500' : 'border-gray-300'
-            }`}
-            placeholder="your.email@example.com"
-          />
-          {errors.email && (
-            <p className="mt-1 text-sm text-red-600">{errors.email}</p>
-          )}
-        </div>
-
-        {/* Phone Field */}
-        <div>
-          <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-            Phone <span className="text-red-500">*</span>
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all ${
-              errors.phone ? 'border-red-500' : 'border-gray-300'
-            }`}
-            placeholder="+91-XXXXXXXXXX"
-          />
-          {errors.phone && (
-            <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
-          )}
-        </div>
-
-        {/* Subject Field */}
-        <div>
-          <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
-            Subject
+          <label htmlFor="organizationName" className="block text-sm font-semibold text-gray-700 mb-2">
+            Organization Name <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
+            id="organizationName"
+            name="organizationName"
+            value={formData.organizationName}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-            placeholder="Brief subject of your inquiry"
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all ${
+              errors.organizationName ? 'border-red-500' : 'border-gray-300'
+            }`}
+            placeholder="Your company or organization name"
           />
+          {errors.organizationName && (
+            <p className="mt-1 text-sm text-red-600">{errors.organizationName}</p>
+          )}
+        </div>
+
+        {/* Email and Phone in Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {/* Email Field */}
+          <div>
+            <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+              Email <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all ${
+                errors.email ? 'border-red-500' : 'border-gray-300'
+              }`}
+              placeholder="your.email@example.com"
+            />
+            {errors.email && (
+              <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+            )}
+          </div>
+
+          {/* Phone Field */}
+          <div>
+            <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+              Phone <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all ${
+                errors.phone ? 'border-red-500' : 'border-gray-300'
+              }`}
+              placeholder="+91-XXXXXXXXXX"
+            />
+            {errors.phone && (
+              <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+            )}
+          </div>
+        </div>
+
+        {/* Industry Type Dropdown */}
+        <div>
+          <label htmlFor="industryType" className="block text-sm font-semibold text-gray-700 mb-2">
+            Industry Type <span className="text-red-500">*</span>
+          </label>
+          <select
+            id="industryType"
+            name="industryType"
+            value={formData.industryType}
+            onChange={handleChange}
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all ${
+              errors.industryType ? 'border-red-500' : 'border-gray-300'
+            }`}
+          >
+            <option value="">Select your industry</option>
+            {industries.map((industry, index) => (
+              <option key={index} value={industry}>{industry}</option>
+            ))}
+          </select>
+          {errors.industryType && (
+            <p className="mt-1 text-sm text-red-600">{errors.industryType}</p>
+          )}
+        </div>
+
+        {/* Service Required Dropdown */}
+        <div>
+          <label htmlFor="serviceRequired" className="block text-sm font-semibold text-gray-700 mb-2">
+            Service Required <span className="text-red-500">*</span>
+          </label>
+          <select
+            id="serviceRequired"
+            name="serviceRequired"
+            value={formData.serviceRequired}
+            onChange={handleChange}
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all ${
+              errors.serviceRequired ? 'border-red-500' : 'border-gray-300'
+            }`}
+          >
+            <option value="">Select service type</option>
+            {services.map((service, index) => (
+              <option key={index} value={service}>{service}</option>
+            ))}
+          </select>
+          {errors.serviceRequired && (
+            <p className="mt-1 text-sm text-red-600">{errors.serviceRequired}</p>
+          )}
         </div>
 
         {/* Message Field */}
         <div>
           <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-            Message <span className="text-red-500">*</span>
+            Message/Query <span className="text-red-500">*</span>
           </label>
           <textarea
             id="message"
@@ -215,7 +328,7 @@ const ContactForm = () => {
             className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none ${
               errors.message ? 'border-red-500' : 'border-gray-300'
             }`}
-            placeholder="Please describe your inquiry or question..."
+            placeholder="Describe your requirements or questions in detail..."
           />
           {errors.message && (
             <p className="mt-1 text-sm text-red-600">{errors.message}</p>
@@ -231,7 +344,7 @@ const ContactForm = () => {
             disabled={isSubmitting}
             className="w-full"
           >
-            {isSubmitting ? 'Sending...' : 'Send Message'}
+            {isSubmitting ? 'Sending...' : 'Request a Consultation'}
           </Button>
         </div>
 

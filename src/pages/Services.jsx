@@ -1,99 +1,260 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import ServiceCard from '../components/services/ServiceCard';
 import ServicesFAQ from '../components/services/ServicesFAQ';
-import services from '../data/servicesData';
-import Button from '../components/common/Button';
-import { FaPhone } from 'react-icons/fa';
+import { services } from '../data/servicesData';
+import { 
+  FaFileInvoiceDollar, 
+  FaFileInvoice, 
+  FaBuilding, 
+  FaBook, 
+  FaClipboardCheck,
+  FaSearchDollar,
+  FaLandmark,
+  FaHandsHelping,
+  FaWarehouse,
+  FaUserTie,
+  FaChevronDown,
+  FaChevronUp,
+  FaEnvelope
+} from 'react-icons/fa';
 
 const Services = () => {
+  const [expandedService, setExpandedService] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const iconMap = {
+    FaFileInvoiceDollar: FaFileInvoiceDollar,
+    FaFileInvoice: FaFileInvoice,
+    FaBuilding: FaBuilding,
+    FaBook: FaBook,
+    FaClipboardCheck: FaClipboardCheck,
+    FaSearchDollar: FaSearchDollar,
+    FaLandmark: FaLandmark,
+    FaHandsHelping: FaHandsHelping,
+    FaWarehouse: FaWarehouse,
+    FaUserTie: FaUserTie
+  };
+
+  const categories = ['All', 'Tax', 'Audit', 'Corporate', 'Advisory', 'Accounting'];
+
+  const filteredServices = selectedCategory === 'All' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
+
+  const toggleService = (serviceId) => {
+    setExpandedService(expandedService === serviceId ? null : serviceId);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 text-white py-16 lg:py-24 overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80&fit=crop" 
-            alt="Professional Services" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 via-primary-800/90 to-blue-900/95"></div>
-        </div>
-        
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
+      <section className="relative py-20 lg:py-28 bg-gradient-to-br from-blue-50 via-white to-blue-50 overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+            backgroundImage: `repeating-linear-gradient(
+              0deg,
+              transparent,
+              transparent 39px,
+              rgba(3, 62, 96, 0.1) 39px,
+              rgba(3, 62, 96, 0.1) 40px
+            )`
           }}></div>
         </div>
-
+        
         <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
-            >
-              Our Professional Services
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-xl md:text-2xl text-blue-100 mb-8"
-            >
-              Comprehensive financial and compliance solutions tailored to your business needs
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-lg text-blue-200"
-            >
-              From tax planning to audit services, we provide expert guidance across all aspects of financial management
-            </motion.p>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ color: '#023E60' }}>
+              Our Services
+            </h1>
+            <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: '#f59e0b' }}></div>
+            <p className="text-xl text-gray-700 leading-relaxed">
+              Comprehensive accounting, audit, tax, and advisory services tailored to your business needs. 
+              Three decades of professional excellence across 22+ industries.
+            </p>
           </motion.div>
         </div>
       </section>
 
+      {/* Category Filter */}
+      <section className="py-8 bg-white border-b border-gray-200">
+        <div className="container-custom">
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+                style={selectedCategory === category ? { backgroundColor: '#023E60' } : {}}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index) => {
+                const IconComponent = iconMap[service.icon] || FaClipboardCheck;
+                const isExpanded = expandedService === service.id;
+                
+                return (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ delay: index * 0.05, duration: 0.5 }}
+                    className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  >
+                    {/* Card Header */}
+                    <div className="p-6">
+                      <div className="flex items-start gap-4 mb-4">
+                        {/* Icon */}
+                        <div className="flex-shrink-0">
+                          <div 
+                            className="w-16 h-16 rounded-xl flex items-center justify-center shadow-md"
+                            style={{ backgroundColor: '#023E60' }}
+                          >
+                            <IconComponent className="text-2xl text-white" />
+                          </div>
+                        </div>
+
+                        {/* Title */}
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold mb-2 leading-tight" style={{ color: '#023E60' }}>
+                            {service.title}
+                          </h3>
+                          {service.category && (
+                            <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full" style={{ backgroundColor: '#e0f2fe', color: '#023E60' }}>
+                              {service.category}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Short Description */}
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                        {service.shortDescription}
+                      </p>
+
+                      {/* Expand/Collapse Button */}
+                      <button
+                        onClick={() => toggleService(service.id)}
+                        className="flex items-center gap-2 text-sm font-semibold hover:underline transition-all"
+                        style={{ color: '#023E60' }}
+                      >
+                        {isExpanded ? (
+                          <>
+                            <span>Show Less</span>
+                            <FaChevronUp />
+                          </>
+                        ) : (
+                          <>
+                            <span>Learn More</span>
+                            <FaChevronDown />
+                          </>
+                        )}
+                      </button>
+                    </div>
+
+                    {/* Expanded Content */}
+                    {isExpanded && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="border-t border-gray-200 bg-gradient-to-br from-blue-50 to-white"
+                      >
+                        <div className="p-6">
+                          {/* Full Description */}
+                          <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                            {service.description}
+                          </p>
+
+                          {/* Services Include */}
+                          {service.servicesInclude && service.servicesInclude.length > 0 && (
+                            <div className="mb-4">
+                              <h4 className="font-bold mb-3 text-sm" style={{ color: '#023E60' }}>
+                                Services Include:
+                              </h4>
+                              <ul className="space-y-2">
+                                {service.servicesInclude.slice(0, 5).map((item, idx) => (
+                                  <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
+                                    <span className="text-xs mt-1" style={{ color: '#159645' }}>✓</span>
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                                {service.servicesInclude.length > 5 && (
+                                  <li className="text-sm text-gray-500 italic">
+                                    ...and {service.servicesInclude.length - 5} more services
+                                  </li>
+                                )}
+                              </ul>
+                            </div>
+                          )}
+
+                          {/* Lead By (for Forensic Audit) */}
+                          {service.leadBy && (
+                            <p className="text-sm text-gray-600 italic mb-4">
+                              <strong>Led by:</strong> {service.leadBy}
+                            </p>
+                          )}
+                        </div>
+                      </motion.div>
+                    )}
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What We Offer
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Need Professional Guidance?
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Explore our comprehensive range of professional services designed to meet your financial and compliance requirements
+            <p className="text-lg mb-8 text-blue-100">
+              Let's discuss how we can help your business with our comprehensive accounting and advisory services.
             </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              style={{ color: '#023E60' }}
+            >
+              <FaEnvelope />
+              <span>Contact Us Today</span>
+            </Link>
           </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-              >
-                <ServiceCard service={service} />
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
