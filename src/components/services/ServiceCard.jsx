@@ -111,7 +111,7 @@ const ServiceCard = ({ service, index }) => {
           onClick={toggleExpand}
           className="flex items-center gap-2 text-accent-600 hover:text-accent-700 font-semibold transition-colors duration-300"
         >
-          <span>{isExpanded ? 'Show Less' : 'Learn More'}</span>
+          <span>{isExpanded ? 'Show Less' : 'Read More'}</span>
           {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
         </button>
       </div>

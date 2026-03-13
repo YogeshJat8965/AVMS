@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ServicesFAQ from '../components/services/ServicesFAQ';
 import { services } from '../data/servicesData';
@@ -14,13 +14,11 @@ import {
   FaHandsHelping,
   FaWarehouse,
   FaUserTie,
-  FaChevronDown,
-  FaChevronUp,
   FaEnvelope
 } from 'react-icons/fa';
 
 const Services = () => {
-  const [expandedService, setExpandedService] = useState(null);
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const iconMap = {
@@ -42,8 +40,8 @@ const Services = () => {
     ? services 
     : services.filter(service => service.category === selectedCategory);
 
-  const toggleService = (serviceId) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
+  const handleCardClick = (slug) => {
+    navigate(`/services/${slug}`);
   };
 
   return (
@@ -114,7 +112,6 @@ const Services = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index) => {
                 const IconComponent = iconMap[service.icon] || FaClipboardCheck;
-                const isExpanded = expandedService === service.id;
                 
                 return (
                   <motion.div
@@ -123,10 +120,19 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ delay: index * 0.05, duration: 0.5 }}
-                    className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+                    onClick={() => handleCardClick(service.slug)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        handleCardClick(service.slug);
+                      }
+                    }}
+                    role="button"
+                    tabIndex={0}
+                    className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer h-full"
                   >
                     {/* Card Header */}
-                    <div className="p-6">
+                    <div className="p-6 flex flex-col h-full">
                       <div className="flex items-start gap-4 mb-4">
                         {/* Icon */}
                         <div className="flex-shrink-0">
@@ -156,72 +162,18 @@ const Services = () => {
                         {service.shortDescription}
                       </p>
 
-                      {/* Expand/Collapse Button */}
+                      {/* Read More Button */}
                       <button
-                        onClick={() => toggleService(service.id)}
-                        className="flex items-center gap-2 text-sm font-semibold hover:underline transition-all"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleCardClick(service.slug);
+                        }}
+                        className="text-sm font-semibold hover:underline transition-all mt-auto self-start text-left"
                         style={{ color: '#023E60' }}
                       >
-                        {isExpanded ? (
-                          <>
-                            <span>Show Less</span>
-                            <FaChevronUp />
-                          </>
-                        ) : (
-                          <>
-                            <span>Learn More</span>
-                            <FaChevronDown />
-                          </>
-                        )}
+                        <span>Read More</span>
                       </button>
                     </div>
-
-                    {/* Expanded Content */}
-                    {isExpanded && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="border-t border-gray-200 bg-gradient-to-br from-blue-50 to-white"
-                      >
-                        <div className="p-6">
-                          {/* Full Description */}
-                          <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                            {service.description}
-                          </p>
-
-                          {/* Services Include */}
-                          {service.servicesInclude && service.servicesInclude.length > 0 && (
-                            <div className="mb-4">
-                              <h4 className="font-bold mb-3 text-sm" style={{ color: '#023E60' }}>
-                                Services Include:
-                              </h4>
-                              <ul className="space-y-2">
-                                {service.servicesInclude.slice(0, 5).map((item, idx) => (
-                                  <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                                    <span className="text-xs mt-1" style={{ color: '#159645' }}>✓</span>
-                                    <span>{item}</span>
-                                  </li>
-                                ))}
-                                {service.servicesInclude.length > 5 && (
-                                  <li className="text-sm text-gray-500 italic">
-                                    ...and {service.servicesInclude.length - 5} more services
-                                  </li>
-                                )}
-                              </ul>
-                            </div>
-                          )}
-
-                          {/* Lead By (for Forensic Audit) */}
-                          {service.leadBy && (
-                            <p className="text-sm text-gray-600 italic mb-4">
-                              <strong>Led by:</strong> {service.leadBy}
-                            </p>
-                          )}
-                        </div>
-                      </motion.div>
-                    )}
                   </motion.div>
                 );
               })}

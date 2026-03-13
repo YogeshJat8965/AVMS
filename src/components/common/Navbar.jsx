@@ -67,6 +67,10 @@ const Navbar = () => {
     setServicesDropdownOpen(false);
     setActiveSubMenu(null);
   };
+
+  const handleServicesClick = () => {
+    navigate('/services');
+  };
   
   return (
     <nav className="hidden lg:flex items-center space-x-1">
@@ -100,6 +104,7 @@ const Navbar = () => {
         onMouseLeave={handleMouseLeave}
       >
         <button
+          onClick={handleServicesClick}
           className="relative px-4 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium flex items-center gap-1"
         >
           Services

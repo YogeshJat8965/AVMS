@@ -143,12 +143,17 @@ const ServiceDetail = () => {
                         transition={{ delay: index * 0.1 }}
                         className="border-l-4 border-primary-600 pl-6"
                       >
-                        <h3 className="text-2xl font-bold mb-3 text-gray-900">
-                          {subService.name}
-                        </h3>
-                        <p className="text-gray-700 leading-relaxed text-lg">
-                          {subService.description}
-                        </p>
+                        <Link
+                          to={`/services/${subService.slug}`}
+                          className="block group"
+                        >
+                          <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-primary-600 transition-colors">
+                            {subService.name}
+                          </h3>
+                          <p className="text-gray-700 leading-relaxed text-lg">
+                            {subService.description}
+                          </p>
+                        </Link>
                       </motion.div>
                     ))}
                   </div>
