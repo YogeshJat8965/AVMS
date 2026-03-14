@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCheckCircle, FaChevronRight, FaArrowRight } from 'react-icons/fa';
 import { servicesNavData } from '../data/servicesNavData';
+import { services } from '../data/servicesData';
 import Button from '../components/common/Button';
 
 const ServiceDetail = () => {
@@ -16,7 +17,32 @@ const ServiceDetail = () => {
     // Scroll to top when component mounts or slug changes
     window.scrollTo(0, 0);
 
-    // Find if slug is a main category
+    // First try the card dataset used by Services page so every card slug resolves.
+    const directService = services.find((service) => service.slug === slug);
+
+    if (directService) {
+      setServiceData({
+        ...directService,
+        name: directService.title,
+        mainCategory: directService.category,
+        mainCategorySlug: null
+      });
+      setIsMainCategory(false);
+      setRelatedServices(
+        services
+          .filter((service) => service.category === directService.category && service.slug !== slug)
+          .slice(0, 3)
+          .map((service) => ({
+            id: service.id,
+            name: service.title,
+            slug: service.slug,
+            description: service.shortDescription || service.description
+          }))
+      );
+      return;
+    }
+
+    // Otherwise resolve legacy navigation categories/sub-services.
     const mainCategory = servicesNavData.find(cat => cat.slug === slug);
     
     if (mainCategory) {
@@ -81,7 +107,7 @@ const ServiceDetail = () => {
             <Link to="/" className="text-white">Home</Link>
             <FaChevronRight className="text-xs" />
             <Link to="/services" className="text-white">Services</Link>
-            {!isMainCategory && (
+            {!isMainCategory && serviceData.mainCategorySlug && (
               <>
                 <FaChevronRight className="text-xs" />
                 <Link 
@@ -171,13 +197,13 @@ const ServiceDetail = () => {
                     
                     <div className="bg-gradient-to-br from-primary-50 to-blue-50 rounded-xl p-8 mb-8">
                       <h3 className="text-2xl font-bold mb-4 text-gray-900">
-                        Key Features
+                        Key Services
                       </h3>
                       <ul className="space-y-3">
-                        {serviceData.description.split(',').map((feature, index) => (
+                        {(serviceData.servicesInclude || serviceData.description.split(',')).map((feature, index) => (
                           <li key={index} className="flex items-start gap-3">
                             <FaCheckCircle className="text-accent-600 mt-1 flex-shrink-0" />
-                            <span className="text-gray-700">{feature.trim()}</span>
+                            <span className="text-gray-700">{typeof feature === 'string' ? feature.trim() : feature}</span>
                           </li>
                         ))}
                       </ul>
